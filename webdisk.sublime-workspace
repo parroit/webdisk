@@ -1,0 +1,1280 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"charc",
+				"charcode"
+			],
+			[
+				"ex",
+				"executable"
+			],
+			[
+				"toke",
+				"token"
+			],
+			[
+				"th",
+				"through"
+			],
+			[
+				"shell",
+				"shellView"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"che",
+				"checkUpgradesAvailable"
+			],
+			[
+				"encod",
+				"encodedPath"
+			],
+			[
+				"igno",
+				"ignoreIt"
+			],
+			[
+				"ignore",
+				"ignoreFilePath"
+			],
+			[
+				"re",
+				"remaining"
+			],
+			[
+				"un",
+				"unzipEntries"
+			],
+			[
+				"module",
+				"moduleName"
+			],
+			[
+				"lo",
+				"loadFile"
+			],
+			[
+				"data",
+				"dataAllarmi"
+			],
+			[
+				"tex-",
+				"text-align"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"tot",
+				"totalPages"
+			],
+			[
+				"page",
+				"pageSize"
+			],
+			[
+				"thr",
+				"throwsWith"
+			],
+			[
+				"could",
+				"coudlBe"
+			],
+			[
+				"curr",
+				"currentPage"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"Data",
+				"DataName"
+			],
+			[
+				"he",
+				"headerView"
+			],
+			[
+				"ro",
+				"rootContent"
+			],
+			[
+				"read",
+				"readFileSync"
+			],
+			[
+				"site",
+				"siteConfig"
+			],
+			[
+				"setup",
+				"setupConfig"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"system",
+				"System"
+			],
+			[
+				"ss",
+				"sistema"
+			],
+			[
+				"expe",
+				"expected"
+			],
+			[
+				"templ",
+				"templates"
+			],
+			[
+				"impi",
+				"impiantiHtml"
+			],
+			[
+				"pl",
+				"Plant"
+			],
+			[
+				"no",
+				"nodes"
+			],
+			[
+				"leve",
+				"leveldown"
+			],
+			[
+				"ws",
+				"wsTemplates"
+			],
+			[
+				"config",
+				"configFileContext"
+			],
+			[
+				"chil",
+				"children"
+			],
+			[
+				"_",
+				"_findDirectives"
+			],
+			[
+				"di",
+				"directive"
+			],
+			[
+				"dire",
+				"directives"
+			],
+			[
+				"reg",
+				"registerDirective"
+			],
+			[
+				"filter",
+				"filtersDone"
+			],
+			[
+				"mk",
+				"make-xs-column"
+			],
+			[
+				"ala",
+				"alarm-state"
+			],
+			[
+				"nav",
+				"nav-bg"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"folder",
+				"folderTree"
+			],
+			[
+				"fol",
+				"folderTree"
+			],
+			[
+				"in",
+				"inRU"
+			],
+			[
+				"monitor",
+				"monitorKey"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"Main",
+				"MainView"
+			],
+			[
+				"p",
+				"path"
+			],
+			[
+				"addDe",
+				"addDetailValue"
+			],
+			[
+				"alla",
+				"allarme"
+			],
+			[
+				"new",
+				"newTimeStamp"
+			],
+			[
+				"call",
+				"callHandlers"
+			],
+			[
+				"serv",
+				"serviceReaded"
+			],
+			[
+				"forma",
+				"formatSpec"
+			],
+			[
+				"get",
+				"getVariable"
+			],
+			[
+				"has",
+				"hasFilters"
+			],
+			[
+				"file",
+				"fileInfo"
+			],
+			[
+				"mac",
+				"matcher"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"cons",
+				"consoleOutput"
+			],
+			[
+				"cmd",
+				"cmdArgs"
+			],
+			[
+				"pa",
+				"parsedOptions"
+			],
+			[
+				"comm",
+				"commandName"
+			],
+			[
+				"arg",
+				"args"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"back",
+				"backCode"
+			],
+			[
+				"codi",
+				"codice"
+			],
+			[
+				"sis",
+				"sistemaRichiesto"
+			],
+			[
+				"siste",
+				"sistemaRichiesto"
+			],
+			[
+				"SIAC",
+				"SIACS1"
+			],
+			[
+				"query",
+				"querySelectorAll"
+			],
+			[
+				"start",
+				"startBtns"
+			],
+			[
+				"index",
+				"index-frame"
+			],
+			[
+				"succe",
+				"succeed"
+			],
+			[
+				"utils",
+				"utilsModule"
+			],
+			[
+				"nma",
+				"nameSpace"
+			],
+			[
+				"nam",
+				"nameSpace"
+			],
+			[
+				"it",
+				"itThrowWith"
+			],
+			[
+				"e",
+				"expect"
+			],
+			[
+				"det",
+				"detailed"
+			],
+			[
+				"allarme",
+				"allarmeStato"
+			],
+			[
+				"sist",
+				"sistema"
+			],
+			[
+				"optni",
+				"options"
+			],
+			[
+				"this",
+				"thisArea"
+			],
+			[
+				"readAlarmDetailsH",
+				"readAlarmDetailsHistory"
+			],
+			[
+				"all",
+				"allTimes"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"im",
+				"impianto"
+			],
+			[
+				"impianto",
+				"nomeImpianto"
+			],
+			[
+				"pla",
+				"plantTags"
+			],
+			[
+				"cu",
+				"currentPost"
+			],
+			[
+				"time",
+				"timeRange"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"al",
+				"alarm"
+			],
+			[
+				"packa",
+				"packageName"
+			],
+			[
+				"pack",
+				"packageName"
+			],
+			[
+				"requi",
+				"requirePackage"
+			],
+			[
+				"paca",
+				"packageVersion"
+			],
+			[
+				"script",
+				"scriptContent"
+			],
+			[
+				"on",
+				"onPackageInstalled"
+			],
+			[
+				"root",
+				"rootPath"
+			],
+			[
+				"error",
+				"Error"
+			],
+			[
+				"retry",
+				"retryCount"
+			],
+			[
+				"package",
+				"packageName"
+			],
+			[
+				"ca",
+				"callAjax"
+			],
+			[
+				"Fs",
+				"FSManager"
+			],
+			[
+				"save",
+				"saveStream"
+			],
+			[
+				"possi",
+				"possibleCollider"
+			],
+			[
+				"colli",
+				"colliders"
+			],
+			[
+				"rout",
+				"routeParams"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"off",
+				"offlineHandler"
+			],
+			[
+				"codie",
+				"codiceSistema"
+			],
+			[
+				"co",
+				"continuousChecking"
+			],
+			[
+				"tim",
+				"timeStamp"
+			],
+			[
+				"c",
+				"checkAlarms"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/bin/grunt-init",
+			"settings":
+			{
+				"buffer_size": 3223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/tasks/init.js",
+			"settings":
+			{
+				"buffer_size": 18387,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/tasks/lib/prompt.js",
+			"settings":
+			{
+				"buffer_size": 5296,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/node_modules/prompt/README.md",
+			"settings":
+			{
+				"buffer_size": 6443,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"PA",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Gr",
+				"Grunt"
+			],
+			[
+				"grun",
+				"Grunt"
+			],
+			[
+				"Grunt",
+				"Grunt"
+			],
+			[
+				"GR",
+				"Grunt"
+			],
+			[
+				"PAc",
+				"Package Control: Remove Package"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"PAck",
+				"Package Control: List Packages"
+			],
+			[
+				"pa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"mark",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"Mark",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"Markdo",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"MArkd",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"MArk",
+				"Set Syntax: Markdown"
+			]
+		],
+		"width": 576.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/parroit/Scrivania/src/girodelcielo/Gruntfile.js",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/disturbi-apprendimento.html",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/index.html",
+		"/home/parroit/Scrivania/src/girodelcielo/src/less/style.less",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/servizi-scuola.html",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/interventi-psicologici.html",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/disturbi_apprendimento.html",
+		"/home/parroit/Scrivania/src/girodelcielo/build/chisiamo.html",
+		"/home/parroit/Scrivania/src/girodelcielo/src/templates/chisiamo.html",
+		"/home/parroit/Scrivania/src/girodelcielo/.gitignore",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/health/pdf_template.js",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/health/html_template.html",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/health-foto/html_template.html",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/technology/html_template.html",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/technology-foto/html_template.html",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/health-foto/pdf_template.js",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/technology/pdf_template.js",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/technology-foto/pdf_template.js",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/bv_layouts/health/frutigerltstdroman.ttf",
+		"/home/parroit/Scrivania/src/app-bp/ds-site/client/dsApp/bv/bv-module.js",
+		"/home/parroit/Scrivania/src/app-bp/npm-debug.log",
+		"/media/parroit/Elements/src/shell-js/lib/external-command-runner.js",
+		"/media/parroit/Elements/src/shell-js/lib/console-stdin.js",
+		"/media/parroit/Elements/src/shell-js/lib/shell-controller.js",
+		"/media/parroit/Elements/src/shell-js/ui/index.js",
+		"/media/parroit/Elements/src/shell-js/lib/ansi2html.js",
+		"/media/parroit/Elements/src/shell-js/test/shell-controller_test.js",
+		"/media/parroit/Elements/src/shell-js/lib/command-parser.js",
+		"/media/parroit/Elements/src/shell-js/node_modules/grunt/node_modules/colors/colors.js",
+		"/media/parroit/Elements/src/shell-js/node_modules/grunt/node_modules/colors/ReadMe.md",
+		"/media/parroit/Elements/src/shell-js/ui/index.html",
+		"/media/parroit/Elements/src/shell-js/test/command-parser_test.js",
+		"/media/parroit/Elements/src/shell-js/.gitignore",
+		"/home/parroit/Scrivania/index.html",
+		"/media/parroit/Elements/src/shell-js/Gruntfile.js",
+		"/media/parroit/Elements/src/shell-js/node_modules/tokenizer/lib/Tokenizer.js",
+		"/media/parroit/Elements/src/shell.js/bower.json",
+		"/media/parroit/Elements/src/shell.js/README.md",
+		"/media/parroit/Elements/src/shell.js/Gruntfile.js",
+		"/C/src/shell.js/lib/command-parser.js",
+		"/C/src/shell.js/test/shell-controller_test.js",
+		"/C/src/shell.js/lib/external-command-runner.js",
+		"/C/src/shell.js/lib/shell-controller.js",
+		"/C/src/shell.js/ui/index.js",
+		"/C/src/shell.js/test/external-command-runner_test.js",
+		"/C/src/shell.js/package.json",
+		"/C/src/shell.js/ui/index.html",
+		"/C/src/shell.js/test/.jshintrc",
+		"/C/src/shell.js/test/test-shell-view.js",
+		"/C/src/shell.js/lib/.jshintrc",
+		"/C/src/shell.js/ui/style.css",
+		"/C/src/bpm/website/index.html",
+		"/C/src/shell.js/shell.js",
+		"/C/selex/rho-mobile/upgrader/upgrader.js",
+		"/C/selex/rho-mobile/appcache-builder/appcache-builder.js",
+		"/C/selex/rho-mobile/upgrader/upgrade.html",
+		"/C/selex/rho-mobile/upgrader/upgrader-check.js",
+		"/C/selex/rho-mobile/app-example/index.html",
+		"/C/selex/rho-mobile/app-example/main.appcache",
+		"/C/src/bpm/sources/lib/bpm.js",
+		"/C/selex/rho-mobile/app-example/bower_components/upgrader/upgrader-check.js",
+		"/C/selex/rho-mobile/upgrader/.jshintrc",
+		"/C/selex/rho-mobile/test-upgrade/cache.ignore",
+		"/C/selex/rho-mobile/test-upgrade/main.appcache",
+		"/C/selex/rho-mobile/test-upgrade/index.html",
+		"/C/selex/rho-mobile/appcache-builder/node_modules/stdio/main.js",
+		"/C/selex/rho-mobile/test-upgrade/bower.json",
+		"/C/selex/rho-mobile/upgrader/bower.json",
+		"/C/selex/rho-mobile/upgrader/bower_components/Buttons/.bower.json",
+		"/C/selex/rho-mobile/upgrader/bower_components/Buttons/bower.json",
+		"/C/selex/rho-mobile/upgrader/bower_components/jquery/bower.json",
+		"/C/selex/rho-mobile/upgrader/bower_components/nprogress/bower.json",
+		"/C/Programmi/nodejs.1.10.21/npm",
+		"/C/Documents and Settings/parroit/Dati applicazioni/npm/bower",
+		"/C/Documents and Settings/parroit/.zshrc",
+		"/C/Documents and Settings/parroit/.oh-my-zsh/themes/robbyrussell.zsh-theme",
+		"/C/selex/rho-mobile/upgrader/.gitignore",
+		"/C/Documents and Settings/parroit/.zshrc.pre-oh-my-zsh",
+		"/C/Documents and Settings/parroit/install.sh",
+		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrade.html",
+		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrader.js",
+		"/C/selex/rho-mobile/test-upgrade/db/test.js",
+		"/C/selex/rho-mobile/test-upgrade/db/db.js",
+		"/C/selex/rho-mobile/test-upgrade/db/index.html",
+		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrader.css",
+		"/C/selex/rho-mobile/test-upgrade/db/require.js",
+		"/C/selex/rho-mobile/test-upgrade/db/test/index.js",
+		"/C/selex/rho-mobile/test-upgrade/db/.jshintrc",
+		"/C/selex/rho-mobile/test-upgrade/db/test/a.js",
+		"/C/selex/rho-mobile/test-upgrade/db/test/b.js",
+		"/C/Programmi/nodejs.1.10.21/node_modules/npm/lib/install.js",
+		"/C/Documents and Settings/parroit/Dati applicazioni/_curlrc",
+		"/C/Documents and Settings/parroit/Dati applicazioni/Console/console.xml",
+		"/C/selex/rho-mobile/test-upgrade/appcache-builder/appcache-builder.js",
+		"/C/selex/SSIMobileFase1/js/controller.js",
+		"/C/selex/test-upgrade/upgrader/upgrader.js",
+		"/C/src/auth/lib/auth-storage.js",
+		"/C/src/auth/output.md",
+		"/C/selex/SSIMobileFase1/js/view.js",
+		"/C/selex/SSIMobileFase1/js/webservice-client.js",
+		"/C/src/Console2/README",
+		"/C/selex/SSIMobileFase1/js/utils.js",
+		"/C/selex/SSIMobileFase1/js/fowler.js",
+		"/C/selex/SSIMobileFase1/js/AllarmiView.js",
+		"/C/selex/SSIMobileFase1/js/alchimist.js",
+		"/C/selex/SSIMobileFase1/Gruntfile.js",
+		"/C/selex/SSIMobileFase1/test/phantomjs/start-page.js",
+		"/C/selex/SSIMobileFase1/test/phantomjs/ssimobile-pages.html",
+		"/C/selex/SSIMobileFase1/node_modules/grunt-mocha-test/node_modules/mocha/lib/template.html",
+		"/C/selex/SSIMobileFase1/node_modules/grunt-mocha-test/node_modules/mocha/mocha.js",
+		"/C/selex/SSIMobileFase1/test/phantomjs/ajax.js",
+		"/C/selex/SSIMobileFase1/js/model.js",
+		"/C/selex/SSIMobileFase1/package.json",
+		"/C/selex/SSIMobileFase1/node_modules/grunt-casper/package.json",
+		"/C/selex/SSIMobileFase1/test/ajax.js",
+		"/C/selex/SSIMobileFase1/test/node.js",
+		"/C/selex/SSIMobileFase1/test/fowler-tests.js",
+		"/C/selex/SSIMobileFase1/build/SSIMobile.min.js",
+		"/C/selex/SSIMobileFase1/js/config.js",
+		"/C/selex/SSIMobileFase1/test/phantomjs/doit.html",
+		"/C/selex/SSIMobileFase1/test/phantomjs/ajax.html",
+		"/C/selex/SSIMobileFase1/test/phantomjs/node.html",
+		"/C/selex/SSIMobileFase1/test/phantomjs/node.js",
+		"/C/selex/SSIMobileFase1/services/check-sound-alarms.xml",
+		"/C/selex/SSIMobileFase1/services/check-alarms.xml",
+		"/C/selex/SSIMobileFase1/proxy.js",
+		"/C/Documents and Settings/parroit/Desktop/todo-ssi.txt",
+		"/C/selex/SSIMobileFase1/js/scramble.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 200.0,
+		"where_history":
+		[
+			"/media/parroit/Elements/src/shell-js,-node_modules/**/*,-bower*/**/*",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war\\js",
+			"C:\\selex\\ssimobilefase1\\",
+			"C:\\selex\\ssimobilefase1\\js",
+			"C:\\selex\\ssimobilefase1",
+			"C:\\selex\\ssimobilefase1,-.*node_modules.*",
+			"C:\\selex\\ssimobilefase1,-*node_modules*",
+			"C:\\selex\\ssimobilefase1,-*\\node_modules\\*",
+			"C:\\selex\\ssimobilefase1,-.*\\node_modules\\.*",
+			"C:\\selex\\ssimobilefase1,-\\**\\node_modules\\**\\*",
+			"C:\\selex\\ssimobilefase1,-node_modules\\**\\*",
+			"C:\\selex\\ssimobilefase1,-node_modules\\**",
+			"C:\\selex\\ssimobilefase1",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\selex\\ssimobilefase1",
+			"C:\\src",
+			"C:\\selex\\ssimobilefase1",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\selex\\se_iam_framework\\TCRS\\tttest-swing\\src\\main\\java\\com\\selexes\\testswing",
+			"C:\\selex\\ssimobilefase1",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\selex\\HMCS_SRC\\monitor-ol",
+			"C:\\selex\\iam",
+			"C:\\selex\\HMCS_SRC\\ATTUALE - se.orco.bpm",
+			"C:\\selex\\HMCS_SRC\\",
+			"C:\\selex\\HMCS_SRC\\*,*.pom",
+			"C:\\selex\\HMCS_SRC\\,*.pom",
+			"C:\\selex\\HMCS_SRC\\",
+			"C:\\selex\\HMCS_SRC\\*.pom",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\selex\\SSIMobileFase2,-node_modules/**/*",
+			"C:\\selex\\SSIMobileFase2",
+			"C:\\Programmi\\nodejs.1.10.21\\node_modules\\npm\\**\\*.js",
+			"C:\\Programmi\\nodejs.1.10.21\\node_modules\\npm",
+			"C:\\selex\\SSIMobile\\WebSite\\css",
+			"C:\\selex\\SSIMobile\\WebSite\\",
+			"C:\\selex\\SSIMobile\\WebSite\\js",
+			"C:\\selex\\ssimobile\\js",
+			"C:\\selex\\ssimobile",
+			"\\\\172.31.11.27\\c$\\SelexES\\SSIImpianto\\Publication\\Test\\Requests",
+			"\\\\172.31.11.27\\c$\\SelexES\\SSIImpianto\\Publication\\Test",
+			"C:\\selex\\ssimobile",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\selex\\ssimobile",
+			"C:\\selex\\ssimobileng",
+			"C:\\selex\\ssimobile",
+			"C:\\selex\\ssimobiler",
+			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war",
+			"C:\\Documents and Settings\\parroit\\Desktop\\pulizia4\\oggi"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"prompt",
+			"8",
+			"10",
+			"row",
+			"2",
+			"<header>",
+			"foto/",
+			"master/",
+			"foto/",
+			"'master",
+			"\"master",
+			"\"foto",
+			"\"fot",
+			"'",
+			"console.",
+			"'",
+			"stripColors",
+			"renderChar",
+			"onLiteral",
+			"parseIntArray",
+			"isDeferred",
+			"_tokenize",
+			"end",
+			"_getMatchingRule",
+			"'",
+			"t.",
+			"'",
+			"EventEmitter",
+			"'",
+			"timezone",
+			"localStorage.lastInstalled",
+			"walkFolder",
+			"'",
+			"+",
+			" ",
+			".git",
+			"\\r",
+			"\\r\\n",
+			"filename",
+			"cb",
+			"'",
+			"    ",
+			"  ",
+			":",
+			"describe",
+			"CheckSoundAlarm",
+			"checkSoundAlarm",
+			"text",
+			"CheckNewAlarms",
+			"1000",
+			"renderLineaDetails",
+			"currentPage",
+			"changePage",
+			"right",
+			"left",
+			"placeHolder",
+			"impiantiPlaceHolder",
+			"renderSistemaSynoptic",
+			"btn-big",
+			"rotate",
+			"rota",
+			"rotate",
+			"axy",
+			"[\"",
+			"'",
+			"[ \\t]+\\n",
+			"currentPage",
+			"'",
+			"[ \\t]+\\n",
+			"[\\s\\t]+\\n",
+			"\\s\\s\\s\\s",
+			" \\t",
+			"<h",
+			"alert",
+			"\"<h1>",
+			"<h1>",
+			"<h1>service ",
+			"service ",
+			"service unavailable",
+			"setTimeStamp",
+			"alert",
+			"setTimeStamp",
+			"onPlayRequest",
+			"NewAlarms",
+			"buildLabeledFieldsTableArray",
+			"readAlarmList",
+			"allarmico",
+			"alarm_onclick",
+			"height:",
+			"alarm",
+			"col5",
+			"btn-tile",
+			"alarm-area",
+			"impiantiPlaceHolder",
+			"machinery-list",
+			"choose-btn",
+			"impiantiPlaceHolder",
+			"readAlarmList",
+			"err",
+			"Err",
+			"err",
+			"Err",
+			"err",
+			"hide",
+			"hidd",
+			"pollIntervalSeconds: 30",
+			"pollIntervalSeconds: 10",
+			"pollIntervalSeconds",
+			"Fowler",
+			"throws",
+			"callAlarmList",
+			"readAlarmList",
+			"callAlarmList",
+			"pageSize",
+			"fromTimer",
+			"timeFilters",
+			"readAlarmList",
+			"page",
+			"dayPrev_onclick",
+			"td",
+			"tr",
+			"table",
+			"search-btn",
+			"date-prev",
+			".header",
+			"row",
+			".hea",
+			".col-(.)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"font/",
+			"%20",
+			"+",
+			"\\t",
+			"\"",
+			"\\n",
+			"\"",
+			"\\n",
+			"\\t",
+			"pollIntervalSeconds: config.pollIntervalSeconds",
+			"pollIntervalSeconds: 30",
+			".col$1",
+			"//x = null;",
+			"//delete x.onreadystatechange;",
+			"a",
+			"/",
+			"ws.",
+			"Genova",
+			"",
+			"System",
+			"parroit/level-server",
+			"$1",
+			".",
+			"class",
+			"HttpSerialActors",
+			"HttpActor",
+			"HttpSerialFilters",
+			"@next",
+			"/",
+			"6",
+			"5",
+			"4",
+			"/*\\n$1\\n*/",
+			"/*\\n\\n$1\\n\\n*/",
+			"/*$1*/",
+			"/*\\1*/",
+			"/*$0*/",
+			"/*$2*/",
+			"/*$1*/",
+			"",
+			"\\t",
+			"\\n",
+			"\\t",
+			"define(['",
+			"\"glyphicon glyphicon",
+			"span",
+			"index filter",
+			"0",
+			"checkIdx",
+			"aweforms",
+			"",
+			"CheckSystemAlarmStatus",
+			"'<img src=\"img/online.jpg\">'",
+			"packageRegistry",
+			"packageInfo",
+			"'/'",
+			" src",
+			"",
+			".left",
+			".top",
+			"myPosition.",
+			"itsPosition.",
+			"config.webserviceUrl",
+			"failure:",
+			"(\"display\",\"block\")",
+			"(\"display\",\"inherit\")",
+			"$(\"#siteTh\").css(\"display\",\"initial\");",
+			"PRova PRova",
+			"Ciao Ciao",
+			"Object",
+			"char",
+			"unsigned"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/bin/grunt-init",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1275.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/tasks/init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/tasks/lib/prompt.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3049,
+								3049
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/parroit/programmi/node-v0.10.24-linux-x64/lib/node_modules/grunt-init/node_modules/prompt/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6395,
+								6395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3536.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 101.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 149.0
+	},
+	"output.find_results":
+	{
+		"height": 240.0
+	},
+	"project": "webdisk.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\selex\\rho-mobile\\ssi-fase2\\ssi-mobile.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 439.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
