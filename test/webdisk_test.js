@@ -9,6 +9,7 @@
 "use strict";
 
 var expect = require("expect.js"),
+    concat = require("concat-stream"),
     webdisk = require("../lib/webdisk");
 
 
@@ -24,6 +25,14 @@ describe("webdisk", function() {
 
         it("return readable stream", function() {
             expect(webdisk.listFiles(".").readable).to.be.equal(true);
+        });
+
+        it("return all files in folder", function(done) {
+            webdisk.listFiles("test/files").pipe(concat(function( results) {
+                expect(results).to.be.equal("1.txt\n2.txt");
+                done();
+            }));
+            
         });
     });
 
