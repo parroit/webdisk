@@ -36,14 +36,22 @@ describe("webdisk", function() {
         });
     });
 
-    describe("listFolder", function() {
+    describe("listFolders", function() {
 
         it("is defined", function() {
-            expect(webdisk.listFolder).to.be.an("function");
+            expect(webdisk.listFolders).to.be.an("function");
         });
 
         it("return readable stream", function() {
-            expect(webdisk.listFolder(".").readable).to.be.equal(true);
+            expect(webdisk.listFolders(".").readable).to.be.equal(true);
+        });
+
+        it("return all subfolders", function(done) {
+            webdisk.listFolders("test/files").pipe(concat(function( results) {
+                expect(results).to.be.equal("fold1\nfold2");
+                done();
+            }));
+            
         });
     });
 });
