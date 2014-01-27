@@ -1,40 +1,42 @@
 
 
-<div class="row">
-  <div class="col-md-3">
-  	<div class="panel panel-default">
+<div class="row full-height">
+  <div class="col-md-3 full-height">
+  	<div class="panel panel-default full-height">
 		<div class="panel-heading">
 			{{> folders-toolbar }}
 			
 		</div>
-      	<div class="panel-body">
-      		<div class="folders-tree"></div>
-      	</div>
+        	<div class="panel-body full-height" >
+        		<div class="folders-tree full-expand"></div>
+                    
+        	</div>
   	</div>
   </div>
 
-  <div class="col-md-9">
-  	<div class="panel panel-default">
+  <div class="col-md-9 full-height">
+  	<div class="panel panel-default full-height">
 		<div class="panel-heading">
 			{{> files-toolbar }}
 			
 			
 		</div>
-      	<div class="panel-body">
-      		<table class="table" id="files">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Size</th>
-                <th>Uploaded</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
+        	<div class="panel-body full-height">
+        		<table class="table full-expand" id="files">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Uploaded</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
 
-          </table>
-      	</div>
+                  </table>
+                   
+        	</div>
   	</div>
   </div>
 </div>
