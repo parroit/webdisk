@@ -9,11 +9,26 @@
 "use strict";
 
 var expect = require("expect.js"),
+    fs = require("fs"),
     concat = require("concat-stream"),
     webdisk = require("../lib/webdisk");
 
 
 describe("webdisk", function() {
+
+    before(function(done) {
+        fs.unlink("test/files/fold2/remove.this", function(err) {
+            if (err) {
+                return console.log(err);
+            }
+            fs.unlink("test/only-folders/fold1/remove.this", function(err) {
+                if (err) {
+                    return console.log(err);
+                }
+                done();
+            });
+        });
+    });
 
     function sortByName(array) {
         array.sort(function(a, b) {
@@ -85,7 +100,7 @@ describe("webdisk", function() {
             }));
 
         });
-        
+
         it("return all file size in folder", function(done) {
             webdisk.listFiles("test/files").pipe(concat(function(results) {
 
