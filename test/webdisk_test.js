@@ -16,35 +16,14 @@ var expect = require("expect.js"),
 
 describe("webdisk", function() {
 
-    before(function(done) {
-        fs.unlink("test/files/fold2/remove.this", function(err) {
-            if (err) {
-                return console.log(err);
-            }
-            fs.unlink("test/only-folders/fold1/remove.this", function(err) {
-                if (err) {
-                    return console.log(err);
-                }
-                done();
-            });
-        });
+    before(function() {
+        fs.unlinkSync("test/files/fold2/remove.this");
+        fs.unlinkSync("test/only-folders/fold1/remove.this");
     });
 
-    after(function(done) {
-        fs.writeFile("test/files/fold2/remove.this", "remove.this", function(err) {
-
-
-            if (err) {
-                return console.log(err);
-            }
-
-            fs.writeFile("test/only-folders/fold1/remove.this", "remove.this", function(err) {
-                if (err) {
-                    return console.log(err);
-                }
-                done();
-            });
-        });
+    after(function() {
+        fs.writeFileSync("test/files/fold2/remove.this", "remove.this");
+        fs.writeFileSync("test/only-folders/fold1/remove.this", "remove.this");
     });
 
     function sortByName(array) {
