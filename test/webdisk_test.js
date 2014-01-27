@@ -30,6 +30,23 @@ describe("webdisk", function() {
         });
     });
 
+     after(function(done) {
+        fs.writeFile("test/files/fold2/remove.this", "remove.this", function (err) {
+          
+       
+            if (err) {
+                return console.log(err);
+            }
+            
+            fs.writeFile("test/only-folders/fold1/remove.this", "remove.this", function(err) {
+                if (err) {
+                    return console.log(err);
+                }
+                done();
+            });
+        });
+    });
+
     function sortByName(array) {
         array.sort(function(a, b) {
             if (a.name === b.name) {
