@@ -38,6 +38,7 @@
     "express": "~3.4.8",
     "passport": "~0.2.0",
     "concat-stream": "~1.4.1",
-    "through-stream": "0.0.2"
+    "through-stream": "0.0.2",
+    "less-middleware": "~0.1.15"
   }
 }
