@@ -14,6 +14,16 @@ var expect = require("expect.js"),
 
 
 describe("webdisk", function() {
+
+    function sortByName(array) {
+        array.sort(function(a, b) {
+            if (a.name === b.name) {
+                return 0;
+            }
+            return a.name < b.name ? -1 : +1;
+        });
+    }
+
     it("is defined", function() {
         expect(webdisk).to.be.an("object");
     });
@@ -28,47 +38,76 @@ describe("webdisk", function() {
         });
 
         it("return all file names in folder", function(done) {
-            webdisk.listFiles("test/files").pipe(concat(function( results) {
-                
+            webdisk.listFiles("test/files").pipe(concat(function(results) {
+
                 results = JSON.parse(results);
+                sortByName(results);
                 expect(results[0].name).to.be.equal("1.txt");
                 expect(results[1].name).to.be.equal("2.txt");
                 done();
             }));
-            
+
         });
 
+
+
+        it("return folder with only files as empty array", function(done) {
+            webdisk.listFiles("test/only-folders").pipe(concat(function(results) {
+
+
+                expect(results).to.be.equal("[]");
+
+                done();
+            }));
+
+        });
+
+
         it("return all file paths in folder", function(done) {
-            webdisk.listFiles("test/files").pipe(concat(function( results) {
-                
+            webdisk.listFiles("test/files").pipe(concat(function(results) {
+
                 results = JSON.parse(results);
+                sortByName(results);
                 expect(results[0].path).to.be.equal("test/files/1.txt");
                 expect(results[1].path).to.be.equal("test/files/2.txt");
                 done();
             }));
-            
+
         });
 
+        it("return empty folder as empty array", function(done) {
+            webdisk.listFiles("test/files/fold2").pipe(concat(function(results) {
+
+
+                expect(results).to.be.equal("[]");
+
+                done();
+            }));
+
+        });
+        
         it("return all file size in folder", function(done) {
-            webdisk.listFiles("test/files").pipe(concat(function( results) {
-                
+            webdisk.listFiles("test/files").pipe(concat(function(results) {
+
                 results = JSON.parse(results);
+                sortByName(results);
                 expect(results[0].size).to.be.equal(5);
                 expect(results[1].size).to.be.equal(5);
                 done();
             }));
-            
+
         });
 
         it("return all files uplodad date in folder", function(done) {
-            webdisk.listFiles("test/files").pipe(concat(function( results) {
-                
+            webdisk.listFiles("test/files").pipe(concat(function(results) {
+
                 results = JSON.parse(results);
-                expect(results[0].uploaded).to.be.equal(1390811410000);
-                expect(results[1].uploaded).to.be.equal(1390811410000);
+                sortByName(results);
+                expect(results[0].uploaded).to.be.equal(1390843390000);
+                expect(results[1].uploaded).to.be.equal(1390843390000);
                 done();
             }));
-            
+
         });
     });
 
@@ -83,27 +122,48 @@ describe("webdisk", function() {
         });
 
         it("return all subfolders names", function(done) {
-            webdisk.listFolders("test/files").pipe(concat(function( results) {
-                
-                results = JSON.parse(results);
+            webdisk.listFolders("test/files").pipe(concat(function(results) {
 
+                results = JSON.parse(results);
+                sortByName(results);
                 expect(results[0].name).to.be.equal("fold1");
                 expect(results[1].name).to.be.equal("fold2");
                 done();
             }));
-            
+
         });
 
-        it("return all subfolders paths", function(done) {
-            webdisk.listFolders("test/files").pipe(concat(function( results) {
-                
-                results = JSON.parse(results);
+        it("return empty folder as empty array", function(done) {
+            webdisk.listFolders("test/files/fold2").pipe(concat(function(results) {
 
+
+                expect(results).to.be.equal("[]");
+
+                done();
+            }));
+
+        });
+
+        it("return folder with only files as empty array", function(done) {
+            webdisk.listFolders("test/files/fold1").pipe(concat(function(results) {
+
+
+                expect(results).to.be.equal("[]");
+
+                done();
+            }));
+
+        });
+        it("return all subfolders paths", function(done) {
+            webdisk.listFolders("test/files").pipe(concat(function(results) {
+
+                results = JSON.parse(results);
+                sortByName(results);
                 expect(results[0].path).to.be.equal("test/files/fold1");
                 expect(results[1].path).to.be.equal("test/files/fold2");
                 done();
             }));
-            
+
         });
     });
 });

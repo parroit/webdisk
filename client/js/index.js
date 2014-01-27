@@ -88,6 +88,13 @@
 		});
 
 		$(".folders-tree").fancytree({
+			postProcess: function(e,data){
+				var folders = [];
+				data.response.forEach(function(folder){
+					folders.push(createFolderNode(folder));
+				});
+				data.result = folders;
+			},
 			clickFolderMode: 2,
 			lazyload: loadSubFolders,
 

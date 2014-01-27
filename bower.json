@@ -14,7 +14,7 @@
     "momentjs": "~2.5.1",
     "bootstrap": "~3.0.3",
     "jquery-ui": "~1.10.3",
-    "jquery.fancytree": "~2.0.0-6"
+    "fancytree": "~2.0.0"
 
   
   },
