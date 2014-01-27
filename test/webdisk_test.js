@@ -30,14 +30,14 @@ describe("webdisk", function() {
         });
     });
 
-     after(function(done) {
-        fs.writeFile("test/files/fold2/remove.this", "remove.this", function (err) {
-          
-       
+    after(function(done) {
+        fs.writeFile("test/files/fold2/remove.this", "remove.this", function(err) {
+
+
             if (err) {
                 return console.log(err);
             }
-            
+
             fs.writeFile("test/only-folders/fold1/remove.this", "remove.this", function(err) {
                 if (err) {
                     return console.log(err);
@@ -135,8 +135,8 @@ describe("webdisk", function() {
 
                 results = JSON.parse(results);
                 sortByName(results);
-                expect(results[0].uploaded).to.be.equal(1390843390000);
-                expect(results[1].uploaded).to.be.equal(1390843390000);
+                expect(results[0].uploaded).to.be.greaterThan(1390843380000);
+                expect(results[1].uploaded).to.be.greaterThan(1390843380000);
                 done();
             }));
 
