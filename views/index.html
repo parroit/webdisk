@@ -8,7 +8,7 @@
 			
 		</div>
       	<div class="panel-body">
-      		Panel body content goes here...
+      		<div class="folders-tree"></div>
       	</div>
   	</div>
   </div>
@@ -40,6 +40,14 @@
 </div>
 
 {{#yield-scripts}}
+  <script 
+  src="/jquery-ui/ui/jquery-ui.js">
+  </script>
+
+  <link rel="stylesheet" href="/fancytree/dist/skin-themeroller/ui.fancytree.css"/>
+  <script 
+  src="/fancytree/dist/jquery.fancytree-all.js">
+  </script>
   <script src="/js/index.js"></script>
 
 {{/yield-scripts}}

@@ -38,6 +38,17 @@ describe("webdisk", function() {
             
         });
 
+        it("return all file paths in folder", function(done) {
+            webdisk.listFiles("test/files").pipe(concat(function( results) {
+                
+                results = JSON.parse(results);
+                expect(results[0].path).to.be.equal("test/files/1.txt");
+                expect(results[1].path).to.be.equal("test/files/2.txt");
+                done();
+            }));
+            
+        });
+
         it("return all file size in folder", function(done) {
             webdisk.listFiles("test/files").pipe(concat(function( results) {
                 
@@ -71,13 +82,25 @@ describe("webdisk", function() {
             expect(webdisk.listFolders(".").readable).to.be.equal(true);
         });
 
-        it("return all subfolders", function(done) {
+        it("return all subfolders names", function(done) {
             webdisk.listFolders("test/files").pipe(concat(function( results) {
                 
                 results = JSON.parse(results);
 
                 expect(results[0].name).to.be.equal("fold1");
                 expect(results[1].name).to.be.equal("fold2");
+                done();
+            }));
+            
+        });
+
+        it("return all subfolders paths", function(done) {
+            webdisk.listFolders("test/files").pipe(concat(function( results) {
+                
+                results = JSON.parse(results);
+
+                expect(results[0].path).to.be.equal("test/files/fold1");
+                expect(results[1].path).to.be.equal("test/files/fold2");
                 done();
             }));
             

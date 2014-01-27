@@ -520,18 +520,37 @@
 	"buffers":
 	[
 		{
+			"file": "views/index.html",
+			"settings":
+			{
+				"buffer_size": 1050,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/js/index.js",
 			"settings":
 			{
-				"buffer_size": 579,
+				"buffer_size": 1541,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var plugit = require(\"../../index\"),\n    fs = require(\"fs\"),\n    path = require(\"path\");\n\n\nplugit.host.views.showTree = function (position) {\n    plugit.host.views.layout.showView({\n        render: function () {\n            return  '<div class=\"tree\"></div>';\n        },\n        runView: run\n    }, \"east\");\n};\nplugit.host.commands.register(\"project:show\", plugit.host.views.showTree);\n\nfunction run() {\n    function createNode(dir) {\n        var node = {\n\n            title: path.basename(dir),\n            key: dir,\n            children: []\n\n        };\n\n        node.folder = node.lazy = fs.statSync(dir).isDirectory();\n\n        return node;\n\n\n    }\n\n    var root = process.cwd();\n\n    var data = createNode(root);\n\n    plugit.host.views.vendor.$(\".tree\").fancytree({\n        clickFolderMode: 2,\n        lazyload: function (event, data) {\n\n            var node = data.node;\n            data.result = [];\n            if (node.folder) {\n                var files = fs.readdirSync(node.key);\n                files.forEach(function (it) {\n                    var dirPath = node.key + \"/\" + it;\n                    data.result.push(createNode(dirPath));\n\n                });\n            }\n\n\n        },\n        source: [data]\n\n\n    });\n}\n\nplugit.host.views.vendor.$.getStylesheet(__dirname + \"/fancytree/skin-themeroller/ui.fancytree.css\");\nplugit.host.views.vendor.$.getScript(__dirname + \"/fancytree/jquery.fancytree-all.js\", run);\n\n",
+			"file": "sourcer-tree/sourcer-tree-master/index.js",
+			"file_size": 1591,
+			"file_write_time": 130353136487968750,
+			"settings":
+			{
+				"buffer_size": 1431,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "test/webdisk_test.js",
 			"settings":
 			{
-				"buffer_size": 1625,
+				"buffer_size": 3403,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,23 +558,7 @@
 			"file": "lib/webdisk.js",
 			"settings":
 			{
-				"buffer_size": 1466,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "lib/routes.js",
-			"settings":
-			{
-				"buffer_size": 631,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/index.html",
-			"settings":
-			{
-				"buffer_size": 850,
+				"buffer_size": 1800,
 				"line_ending": "Windows"
 			}
 		}
@@ -663,17 +666,20 @@
 	},
 	"file_history":
 	[
+		"/C/DOCUME~1/parroit/IMPOST~1/Temp/Rar$DRa0.512/sourcer-tree-master/index.js",
+		"/C/src/webdisk/bower.json",
+		"/C/src/webdisk/client/js/index.js",
+		"/C/src/webdisk/lib/webdisk.js",
+		"/C/src/webdisk/test/webdisk_test.js",
 		"/C/src/webdisk/views/index.html",
-		"/C/src/webdisk/lib/server.js",
 		"/C/src/webdisk/lib/routes.js",
+		"/C/src/webdisk/lib/server.js",
 		"/C/src/webdisk/views/folders-toolbar.html",
 		"/C/src/webdisk/views/files-toolbar.html",
 		"/C/src/webdisk/views/layout.html",
 		"/C/src/webdisk/client/index.html",
 		"/C/src/webdisk/client/css/webdisk.less",
 		"/C/src/webdisk/less/style.less",
-		"/C/src/webdisk/lib/webdisk.js",
-		"/C/src/webdisk/bower.json",
 		"/C/src/webdisk/.gitignore",
 		"/C/selex/rho-mobile/upgrader/upgrade.html",
 		"/C/selex/rho-mobile/upgrader/.gitignore",
@@ -787,10 +793,7 @@
 		"/C/selex/SSIMobileFase1/js/AllarmiView.js",
 		"/C/selex/SSIMobileFase1/js/alchimist.js",
 		"/C/selex/SSIMobileFase1/Gruntfile.js",
-		"/C/selex/SSIMobileFase1/test/phantomjs/start-page.js",
-		"/C/selex/SSIMobileFase1/test/phantomjs/ssimobile-pages.html",
-		"/C/selex/SSIMobileFase1/node_modules/grunt-mocha-test/node_modules/mocha/lib/template.html",
-		"/C/selex/SSIMobileFase1/node_modules/grunt-mocha-test/node_modules/mocha/mocha.js"
+		"/C/selex/SSIMobileFase1/test/phantomjs/start-page.js"
 	],
 	"find":
 	{
@@ -1074,142 +1077,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/js/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								308,
-								308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "test/webdisk_test.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1625,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1544,
-								1544
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 45.0,
-						"translation.y": 1531.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/webdisk.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1466,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1209,
-								1209
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 960.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "lib/routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 631,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								116,
-								116
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "views/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 850,
+						"buffer_size": 1050,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								518,
-								629
+								817,
+								817
 							]
 						],
 						"settings":
@@ -1219,7 +1104,126 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 442.0,
+						"translation.y": 1030.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/js/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								984,
+								984
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1632.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sourcer-tree/sourcer-tree-master/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								698,
+								698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1056.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test/webdisk_test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3291,
+								3291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 106.0,
+						"translation.y": 2742.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "lib/webdisk.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1076,
+								1076
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 92.0,
+						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1308,7 +1312,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 190.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
