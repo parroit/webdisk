@@ -17,6 +17,7 @@ var expect = require("expect.js"),
 describe("webdisk", function() {
 
     before(function() {
+        webdisk.configure(process.cwd());
         fs.unlinkSync("test/files/fold2/remove.this");
         fs.unlinkSync("test/only-folders/fold1/remove.this");
     });

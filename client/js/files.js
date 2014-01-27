@@ -24,9 +24,9 @@
 		console.log(textStatus + ": " + error);
 	}
 
-	function readFiles() {
-		var url = "/files/" + encodeURIComponent("test/files");
-
+	function readFiles(folder) {
+		var url = "files/"+encodeURIComponent(folder);
+		$("#files tbody").html("");
 		$.get(url)
 
 		.fail(onFailure)
@@ -37,9 +37,11 @@
 		});
 	}
 
-	
+	exports.files = {
+		readFiles: readFiles
+	};
 
-	readFiles();
-	
+	readFiles("parroit");
+
 
 })(window, window);

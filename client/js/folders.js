@@ -36,11 +36,19 @@
     function readFolders() {
 
         var data = createFolderNode({
-            name: "test",
-            path: "test"
+            name: "parroit",
+            path: "parroit"
         });
 
         $(".folders-tree").fancytree({
+            click: function(event, data){
+                if (data.targetType === "title") {
+                    var node = data.node;
+                    global.files.readFiles(node.key);    
+                }
+                
+            },
+
             postProcess: function(e,data){
                 var folders = [];
                 data.response.forEach(function(folder){

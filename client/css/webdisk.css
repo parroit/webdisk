@@ -13,6 +13,7 @@ h1 {
 }
 .panel.full-height .panel-body .full-expand {
   max-height: 95%;
+  overflow: auto;
 }
 .panel.full-height .panel-heading {
   height: 5%;
