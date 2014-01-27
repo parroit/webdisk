@@ -1,33 +1,38 @@
 (function(exports, global){
 
+	function addFile(file){
+		var body = $("#files tbody"),
+
+			tr = $(
+				"<tr>"+
+				"	<td class='name'/>"+
+				"	<td class='size'/>"+
+				"	<td class='uploaded'/>"+
+				"</tr>"
+			);
+
+		tr.find(".name").text(file.name);
+		tr.find(".size").text(file.size);
+		tr.find(".uploaded").text(file.uploaded);
+
+		body.append(tr);
+
+	}
+
+
 	var $ = global.jQuery;
 
 	$.get( "/files/"+
 		encodeURIComponent("test/files"))
 
 		.fail(function(xhr,textStatus, error) {
-			console.log(textStatus+
-				": "+ error );
+			console.log(textStatus+ ": " + error );
 		})
 
 		.done(function(data) {
-			var files = data.split("\n"),
-				body = $("#files tbody");
+			var files = JSON.parse(data);
 
-			files.forEach(function(file){
-				var tr = $(
-					"<tr>"+
-					"	<td class='name'/>"+
-					"	<td class='size'/>"+
-					"	<td class='last-edit'/>"+
-					"	<td class='created'/>"+
-					"</tr>");
-
-				tr.find(".name").text(file);
-
-				body.append(tr);
-
-			});
+			files.forEach(addFile);
 		});
 
 })(window,window);

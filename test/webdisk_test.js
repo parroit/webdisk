@@ -27,9 +27,34 @@ describe("webdisk", function() {
             expect(webdisk.listFiles(".").readable).to.be.equal(true);
         });
 
-        it("return all files in folder", function(done) {
+        it("return all file names in folder", function(done) {
             webdisk.listFiles("test/files").pipe(concat(function( results) {
-                expect(results).to.be.equal("1.txt\n2.txt");
+                
+                results = JSON.parse(results);
+                expect(results[0].name).to.be.equal("1.txt");
+                expect(results[1].name).to.be.equal("2.txt");
+                done();
+            }));
+            
+        });
+
+        it("return all file size in folder", function(done) {
+            webdisk.listFiles("test/files").pipe(concat(function( results) {
+                
+                results = JSON.parse(results);
+                expect(results[0].size).to.be.equal(5);
+                expect(results[1].size).to.be.equal(5);
+                done();
+            }));
+            
+        });
+
+        it("return all files uplodad date in folder", function(done) {
+            webdisk.listFiles("test/files").pipe(concat(function( results) {
+                
+                results = JSON.parse(results);
+                expect(results[0].uploaded).to.be.equal(1390811410000);
+                expect(results[1].uploaded).to.be.equal(1390811410000);
                 done();
             }));
             
@@ -48,7 +73,11 @@ describe("webdisk", function() {
 
         it("return all subfolders", function(done) {
             webdisk.listFolders("test/files").pipe(concat(function( results) {
-                expect(results).to.be.equal("fold1\nfold2");
+                
+                results = JSON.parse(results);
+
+                expect(results[0].name).to.be.equal("fold1");
+                expect(results[1].name).to.be.equal("fold2");
                 done();
             }));
             
