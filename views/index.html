@@ -1,0 +1,45 @@
+
+
+<div class="row">
+  <div class="col-md-3">
+  	<div class="panel panel-default">
+		<div class="panel-heading">
+			{{> folders-toolbar }}
+			
+		</div>
+      	<div class="panel-body">
+      		Panel body content goes here...
+      	</div>
+  	</div>
+  </div>
+
+  <div class="col-md-9">
+  	<div class="panel panel-default">
+		<div class="panel-heading">
+			{{> files-toolbar }}
+			
+			
+		</div>
+      	<div class="panel-body">
+      		<table class="table" id="files">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Last Edit</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+          </table>
+      	</div>
+  	</div>
+  </div>
+</div>
+
+{{#yield-scripts}}
+  <script src="/js/index.js"></script>
+
+{{/yield-scripts}}
