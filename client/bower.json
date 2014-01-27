@@ -1,0 +1,24 @@
+{
+  "name": "webdisk",
+  "description": "web storage server",
+  "version": "0.1.0",
+  "authors": [
+    "andrea.parodi@ebansoftware.net"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.0.3",
+    "nprogress": "0.1.2",
+    "momentjs": "~2.5.1",
+    
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
