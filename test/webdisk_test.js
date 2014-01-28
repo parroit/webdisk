@@ -41,25 +41,57 @@ describe("webdisk", function() {
     });
 
     describe("readFile", function() {
+        var stream;
+
+        before(function(done){
+            webdisk.readFile("test/files/1.txt",function(err,data){
+                if (err)
+                    return console.log(err);
+                stream = data;
+                done();
+            })
+        });
+
         it("is defined", function() {
             expect(webdisk.readFile).to.be.an("function");
         });
 
         it("return readable stream", function() {
-            expect(webdisk.readFile("test/files/1.txt").readable).to.be.equal(true);
+            expect(stream.readable).to.be.equal(true);
         });
 
 
         it("stream has mime type", function() {
-            expect(webdisk.readFile("test/files/1.txt").mime).to.be.equal("text/plain");
+            expect(stream.mime).to.be.equal("text/plain");
         });
 
-        it("unknow file has mime type application/octet-stream", function() {
-            expect(webdisk.readFile("test/strange/1.strange").mime).to.be.equal("application/octet-stream");
+         it("stream has name", function() {
+            expect(stream.name).to.be.equal("1.txt");
         });
+
+        it("stream has size", function() {
+            expect(stream.size).to.be.equal(5);
+        });
+
+        it("unknown file has mime type application/octet-stream", function(done) {
+            webdisk.readFile("test/strange/1.strange",function(err,strange){
+                expect(strange.mime).to.be.equal("application/octet-stream");
+                done();
+            });
+            
+        });
+
+        it("handle file with strange names", function(done) {
+            webdisk.readFile("test/strange/strange file ' name",function(err,strange){
+                expect(strange.size).to.be.equal(7);
+                done();
+            });
+            
+        });
+
 
         it("return file content", function(done) {
-            webdisk.readFile("test/files/1.txt").pipe(concat(function(results) {
+            stream.pipe(concat(function(results) {
 
 
                 expect(results.toString("utf8")).to.be.equal("1.txt");
@@ -92,7 +124,15 @@ describe("webdisk", function() {
 
         });
 
-
+        it("handle file with strange names", function(done) {
+            webdisk.listFiles("test/strange").pipe(concat(function(results) {
+                results = JSON.parse(results);
+                sortByName(results);
+                expect(results[1].name).to.be.equal("strange file ' name");
+                done();
+            }));
+            
+        });
 
         it("return folder with only files as empty array", function(done) {
             webdisk.listFiles("test/only-folders").pipe(concat(function(results) {
@@ -113,6 +153,18 @@ describe("webdisk", function() {
                 sortByName(results);
                 expect(results[0].path).to.be.equal("test/files/1.txt");
                 expect(results[1].path).to.be.equal("test/files/2.txt");
+                done();
+            }));
+
+        });
+
+        it("stream all file mime types in folder", function(done) {
+            webdisk.listFiles("test/files").pipe(concat(function(results) {
+
+                results = JSON.parse(results);
+                sortByName(results);
+                expect(results[0].mime).to.be.equal("text/plain");
+                expect(results[1].mime).to.be.equal("text/plain");
                 done();
             }));
 

@@ -13,14 +13,19 @@
 				"</tr>"
 			);
 
-		tr.find(".name").text(file.name);
+		var $name = tr.find(".name");
+		$name.append("<img src='"+file.mime.replace(/\//g,"_")  + ".png'>");
+		$name.append("&nbsp;<span>"+ file.name + "</span>");
 		tr.find(".size").text(file.size);
 		tr.find(".uploaded").text(file.uploaded);
 		
+		var pathEncoded = encodeURIComponent(file.path).replace(/\'/g,"&apos;");
+		console.log(pathEncoded);
+
 		tr.find(".actions").html(
 			"<a "+
 				"target='_blank' "+
-				"href='/download/"+encodeURIComponent(file.path)+"' "+
+				"href='/download/"+pathEncoded+"' "+
 				"class='btn btn-primary download-file' "+
 				"title='download file'>"+
 				
