@@ -40,6 +40,28 @@ describe("webdisk", function() {
         expect(webdisk).to.be.an("object");
     });
 
+    describe("readFile", function() {
+        it("is defined", function() {
+            expect(webdisk.readFile).to.be.an("function");
+        });
+
+        it("return readable stream", function() {
+            expect(webdisk.readFile("test/files/1.txt").readable).to.be.equal(true);
+        });
+
+        it("return file content", function(done) {
+            webdisk.readFile("test/files/1.txt").pipe(concat(function(results) {
+
+
+                expect(results.toString("utf8")).to.be.equal("1.txt");
+
+                done();
+            }));
+
+        });
+
+    });
+
     describe("listFiles", function() {
         it("is defined", function() {
             expect(webdisk.listFiles).to.be.an("function");
