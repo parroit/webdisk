@@ -14,7 +14,7 @@
 			);
 
 		var $name = tr.find(".name");
-		$name.append("<img src='"+file.mime.replace(/\//g,"_")  + ".png'>");
+		$name.append("<img src='/img/"+file.icon  + "''>");
 		$name.append("&nbsp;<span>"+ file.name + "</span>");
 		tr.find(".size").text(file.size);
 		tr.find(".uploaded").text(file.uploaded);

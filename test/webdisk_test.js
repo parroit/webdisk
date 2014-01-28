@@ -148,7 +148,6 @@ describe("webdisk", function() {
 
         it("return all file paths in folder", function(done) {
             webdisk.listFiles("test/files").pipe(concat(function(results) {
-
                 results = JSON.parse(results);
                 sortByName(results);
                 expect(results[0].path).to.be.equal("test/files/1.txt");
