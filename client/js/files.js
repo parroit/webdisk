@@ -9,12 +9,24 @@
 				"	<td class='name'/>" +
 				"	<td class='size'/>" +
 				"	<td class='uploaded'/>" +
+				"	<td class='actions'/>" +
 				"</tr>"
 			);
 
 		tr.find(".name").text(file.name);
 		tr.find(".size").text(file.size);
 		tr.find(".uploaded").text(file.uploaded);
+		
+		tr.find(".actions").html(
+			"<a "+
+				"target='_blank' "+
+				"href='/download/"+encodeURIComponent(file.path)+"' "+
+				"class='btn btn-primary download-file' "+
+				"title='download file'>"+
+				
+				"<span class='glyphicon glyphicon-cloud-download'></span>"+
+			"</a>"
+		);
 
 		body.append(tr);
 
@@ -31,8 +43,7 @@
 
 		.fail(onFailure)
 
-		.done(function(data) {
-			var files = JSON.parse(data);
+		.done(function(files) {
 			files.forEach(addFile);
 		});
 	}
