@@ -49,6 +49,15 @@ describe("webdisk", function() {
             expect(webdisk.readFile("test/files/1.txt").readable).to.be.equal(true);
         });
 
+
+        it("stream has mime type", function() {
+            expect(webdisk.readFile("test/files/1.txt").mime).to.be.equal("text/plain");
+        });
+
+        it("unknow file has mime type application/octet-stream", function() {
+            expect(webdisk.readFile("test/strange/1.strange").mime).to.be.equal("application/octet-stream");
+        });
+
         it("return file content", function(done) {
             webdisk.readFile("test/files/1.txt").pipe(concat(function(results) {
 
