@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"_setDirty"
+			],
+			[
+				"stor",
+				"storageSaved"
+			],
+			[
+				"di",
+				"dirty"
+			],
+			[
+				"dirt",
+				"dirtyAtStart"
+			],
+			[
+				"route",
+				"routesMap"
+			],
+			[
 				"mim",
 				"mimeIcon"
 			],
@@ -206,10 +226,6 @@
 			[
 				"_",
 				"_findDirectives"
-			],
-			[
-				"di",
-				"directive"
 			],
 			[
 				"dire",
@@ -498,27 +514,44 @@
 			[
 				"Fs",
 				"FSManager"
-			],
-			[
-				"save",
-				"saveStream"
-			],
-			[
-				"possi",
-				"possibleCollider"
-			],
-			[
-				"colli",
-				"colliders"
-			],
-			[
-				"rout",
-				"routeParams"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "test/auth-storage-test.js",
+			"settings":
+			{
+				"buffer_size": 4892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/parroit/.zshrc",
+			"settings":
+			{
+				"buffer_size": 2271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/auth-storage.js",
+			"settings":
+			{
+				"buffer_size": 2423,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/user-storage/users.json",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Unix",
+				"name": "{"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -624,6 +657,15 @@
 	"file_history":
 	[
 		"/home/parroit/src/webdisk/test/webdisk_test.js",
+		"/home/parroit/src/webdisk/.gitignore",
+		"/home/parroit/src/webdisk/config/users.json",
+		"/home/parroit/src/webdisk/config/config.json",
+		"/home/parroit/src/webdisk/lib/server.js",
+		"/home/parroit/src/webdisk/lib/routes-map.js",
+		"/home/parroit/src/webdisk/lib/app-configure.js",
+		"/home/parroit/src/webdisk/lib/auth-storage.js",
+		"/media/parroit/Elements/src/Abdero/auth-token/lib/auth.js",
+		"/media/parroit/Elements/src/Abdero/auth-token/lib/auth-storage.js",
 		"/home/parroit/src/webdisk/client/img/application-javascript.png",
 		"/home/parroit/src/webdisk/client/js/files.js",
 		"/home/parroit/src/webdisk/lib/webdisk.js",
@@ -631,7 +673,6 @@
 		"/home/parroit/src/webdisk/test/strange/strange file ' name",
 		"/home/parroit/src/webdisk/test/strange/strage file'name",
 		"/home/parroit/src/ustore/src/files/files_app.py",
-		"/home/parroit/src/webdisk/lib/server.js",
 		"/home/parroit/src/webdisk/views/index.html",
 		"/home/parroit/src/webdisk/views/files-toolbar.html",
 		"/home/parroit/src/webdisk/test/strange/1.strange",
@@ -742,15 +783,7 @@
 		"/C/selex/rho-mobile/test-upgrade/db/test/a.js",
 		"/C/selex/rho-mobile/test-upgrade/db/test/b.js",
 		"/C/Programmi/nodejs.1.10.21/node_modules/npm/lib/install.js",
-		"/C/Documents and Settings/parroit/Dati applicazioni/_curlrc",
-		"/C/Documents and Settings/parroit/Dati applicazioni/Console/console.xml",
-		"/C/selex/rho-mobile/test-upgrade/appcache-builder/appcache-builder.js",
-		"/C/selex/SSIMobileFase1/js/controller.js",
-		"/C/selex/test-upgrade/upgrader/upgrader.js",
-		"/C/src/auth/lib/auth-storage.js",
-		"/C/src/auth/output.md",
-		"/C/selex/SSIMobileFase1/js/view.js",
-		"/C/selex/SSIMobileFase1/js/webservice-client.js"
+		"/C/Documents and Settings/parroit/Dati applicazioni/_curlrc"
 	],
 	"find":
 	{
@@ -817,6 +850,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"autoload",
+			"this",
+			"'",
+			":",
+			"_users",
 			"webdisk.readFile(\"test/files/1.txt\")",
 			"\"",
 			"mime",
@@ -939,12 +977,7 @@
 			"pollIntervalSeconds: 30",
 			"pollIntervalSeconds: 10",
 			"pollIntervalSeconds",
-			"Fowler",
-			"throws",
-			"callAlarmList",
-			"readAlarmList",
-			"callAlarmList",
-			"pageSize"
+			"Fowler"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1034,8 +1067,127 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "test/auth-storage-test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 102.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/parroit/.zshrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1897,
+								1897
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/auth-storage.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test/user-storage/users.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1099,7 +1251,7 @@
 		[
 			[
 				"",
-				"C:\\selex\\rho-mobile\\ssi-fase2\\ssi-mobile.sublime-project"
+				"~/lin/lin.sublime-project"
 			]
 		],
 		"width": 380.0
