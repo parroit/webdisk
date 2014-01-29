@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"us",
+				"user"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"au",
+				"authRoutes"
+			],
+			[
+				"auth",
+				"authStorage"
+			],
+			[
+				"origi",
+				"originalConfigFile"
+			],
+			[
+				"config",
+				"configFile"
+			],
+			[
+				"con",
+				"configFile"
+			],
+			[
 				"set",
 				"_setDirty"
 			],
@@ -78,10 +110,6 @@
 			[
 				"shell",
 				"shellView"
-			],
-			[
-				"con",
-				"console"
 			],
 			[
 				"che",
@@ -214,10 +242,6 @@
 			[
 				"ws",
 				"wsTemplates"
-			],
-			[
-				"config",
-				"configFileContext"
 			],
 			[
 				"chil",
@@ -490,41 +514,33 @@
 			[
 				"paca",
 				"packageVersion"
-			],
-			[
-				"script",
-				"scriptContent"
-			],
-			[
-				"error",
-				"Error"
-			],
-			[
-				"retry",
-				"retryCount"
-			],
-			[
-				"package",
-				"packageName"
-			],
-			[
-				"ca",
-				"callAjax"
-			],
-			[
-				"Fs",
-				"FSManager"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "lib/auth-storage.js",
+			"file": "node_modules/passport/lib/middleware/authenticate.js",
 			"settings":
 			{
-				"buffer_size": 2423,
+				"buffer_size": 11978,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/app-configure.js",
+			"settings":
+			{
+				"buffer_size": 1510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/session-disk-store.js",
+			"settings":
+			{
+				"buffer_size": 3950,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -535,6 +551,14 @@
 		"selected_items":
 		[
 			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"PA",
+				"Package Control: Install Package"
+			],
+			[
 				"Packa",
 				"Package Control: Install Package"
 			],
@@ -544,10 +568,6 @@
 			],
 			[
 				"Pack",
-				"Package Control: Install Package"
-			],
-			[
-				"PA",
 				"Package Control: Install Package"
 			],
 			[
@@ -611,7 +631,7 @@
 				"Set Syntax: Markdown"
 			]
 		],
-		"width": 576.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -631,34 +651,43 @@
 	},
 	"file_history":
 	[
-		"/home/parroit/src/webdisk/test/auth-storage-test.js",
+		"/home/parroit/Scrivania/src/app-bp/app-bp/lib/server/SessionDiskStore.js",
+		"/home/parroit/src/webdisk/lib/passport-strategy.js",
+		"/home/parroit/src/webdisk/lib/routes-map.js",
+		"/home/parroit/src/webdisk/lib/routes.js",
+		"/home/parroit/src/webdisk/node_modules/passport-local/lib/passport-local/strategy.js",
+		"/home/parroit/src/webdisk/lib/auth-routes.js",
+		"/home/parroit/src/webdisk/views/layout.html",
+		"/home/parroit/src/webdisk/views/index.html",
+		"/home/parroit/src/webdisk/client/css/index.less",
+		"/home/parroit/src/webdisk/views/login.html",
+		"/home/parroit/src/webdisk/lib/auth-storage.js",
+		"/home/parroit/src/webdisk/lib/app-configure.js",
+		"/home/parroit/src/webdisk/config/config.json",
+		"/home/parroit/src/webdisk/client/css/login.less",
+		"/home/parroit/src/webdisk/client/css/webdisk.less",
+		"/home/parroit/src/webdisk/client/js/login.js",
+		"/home/parroit/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/home/parroit/.zshrc",
+		"/home/parroit/src/webdisk/config/users.json",
+		"/home/parroit/src/webdisk/test/auth-storage-test.js",
 		"/home/parroit/src/webdisk/test/user-storage/users.json",
 		"/home/parroit/src/webdisk/test/webdisk_test.js",
 		"/home/parroit/src/webdisk/.gitignore",
-		"/home/parroit/src/webdisk/config/users.json",
-		"/home/parroit/src/webdisk/config/config.json",
 		"/home/parroit/src/webdisk/lib/server.js",
-		"/home/parroit/src/webdisk/lib/routes-map.js",
-		"/home/parroit/src/webdisk/lib/app-configure.js",
-		"/home/parroit/src/webdisk/lib/auth-storage.js",
 		"/media/parroit/Elements/src/Abdero/auth-token/lib/auth.js",
 		"/media/parroit/Elements/src/Abdero/auth-token/lib/auth-storage.js",
 		"/home/parroit/src/webdisk/client/img/application-javascript.png",
 		"/home/parroit/src/webdisk/client/js/files.js",
 		"/home/parroit/src/webdisk/lib/webdisk.js",
-		"/home/parroit/src/webdisk/lib/routes.js",
 		"/home/parroit/src/webdisk/test/strange/strange file ' name",
 		"/home/parroit/src/webdisk/test/strange/strage file'name",
 		"/home/parroit/src/ustore/src/files/files_app.py",
-		"/home/parroit/src/webdisk/views/index.html",
 		"/home/parroit/src/webdisk/views/files-toolbar.html",
 		"/home/parroit/src/webdisk/test/strange/1.strange",
-		"/home/parroit/src/webdisk/client/css/webdisk.less",
 		"/home/parroit/src/webdisk/client/js/folders.js",
 		"/home/parroit/Scrivania/a.html",
 		"/home/parroit/src/webdisk/client/js/index.js",
-		"/home/parroit/src/webdisk/views/layout.html",
 		"/home/parroit/src/webdisk/test/only-folders/fold1/remove.this",
 		"/home/parroit/src/webdisk/test/files/fold2/remove.this",
 		"/home/parroit/src/webdisk/bower_components/fancytree/dist/jquery.fancytree-2.0.0-5.zip",
@@ -749,16 +778,7 @@
 		"/C/selex/rho-mobile/upgrader/.gitignore",
 		"/C/Documents and Settings/parroit/.zshrc.pre-oh-my-zsh",
 		"/C/Documents and Settings/parroit/install.sh",
-		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrade.html",
-		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrader.js",
-		"/C/selex/rho-mobile/test-upgrade/db/test.js",
-		"/C/selex/rho-mobile/test-upgrade/db/db.js",
-		"/C/selex/rho-mobile/test-upgrade/db/index.html",
-		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrader.css",
-		"/C/selex/rho-mobile/test-upgrade/db/require.js",
-		"/C/selex/rho-mobile/test-upgrade/db/test/index.js",
-		"/C/selex/rho-mobile/test-upgrade/db/.jshintrc",
-		"/C/selex/rho-mobile/test-upgrade/db/test/a.js"
+		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrade.html"
 	],
 	"find":
 	{
@@ -769,6 +789,7 @@
 		"height": 200.0,
 		"where_history":
 		[
+			"/home/parroit/src/webdisk/node_modules",
 			"/media/parroit/Elements/src/shell-js,-node_modules/**/*,-bower*/**/*",
 			"C:\\selex\\jboss\\server\\default\\deploy\\HMCSMonitor.war\\js",
 			"C:\\selex\\ssimobilefase1\\",
@@ -822,9 +843,21 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"PASSPORT",
+			"'",
+			"'local'",
+			"then",
+			"  ",
+			"@\"",
+			"'",
+			"\"\"",
+			"'",
+			"';\n",
+			"later';",
+			"'",
 			"autoload",
 			"this",
 			"'",
@@ -940,19 +973,7 @@
 			"impiantiPlaceHolder",
 			"machinery-list",
 			"choose-btn",
-			"impiantiPlaceHolder",
-			"readAlarmList",
-			"err",
-			"Err",
-			"err",
-			"Err",
-			"err",
-			"hide",
-			"hidd",
-			"pollIntervalSeconds: 30",
-			"pollIntervalSeconds: 10",
-			"pollIntervalSeconds",
-			"Fowler"
+			"impiantiPlaceHolder"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -960,6 +981,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"    ",
 			"font/",
 			"%20",
 			"+",
@@ -1042,24 +1064,54 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "lib/auth-storage.js",
+					"file": "node_modules/passport/lib/middleware/authenticate.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2423,
+						"buffer_size": 11978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								468,
-								468
+								7420,
+								7420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2955.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/app-configure.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								539
 							]
 						],
 						"settings":
@@ -1070,6 +1122,36 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/session-disk-store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1321,
+								1321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 306.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1158,7 +1240,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_width": 402.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
