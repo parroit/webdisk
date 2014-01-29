@@ -1,11 +1,18 @@
 "use strict";
 
 var expect = require("expect.js"),
-    AuthStorage = require("../lib/auth-storage"),
-    authStorage = new AuthStorage();
+    AuthStorage = require("../lib/auth-storage");
 
 
 describe("AuthStorage", function() {
+    var authStorage;
+
+    before(function(done) {
+        authStorage = new AuthStorage({
+            file: "test/user-storage/users.json",
+            onReady: done
+        });
+    });
 
     it("is defined", function() {
         expect(AuthStorage).to.be.an("function");
@@ -15,10 +22,60 @@ describe("AuthStorage", function() {
         expect(authStorage).to.be.an("object");
     });
 
+    it("read config files at start", function(done) {
+        authStorage.getUser("ola").then(function(usr) {
+            expect(usr).to.be.an("object");
+            expect(usr.fullname).to.be.equal("parroit");
+            done();
+        })
+
+
+
+    });
+
+    function itInvokeStorageSave(action) {
+        describe("cause storageSaved event to be emitted", function() {
+            before(function(done) {
+                var count = 0;
+
+                function checkStorageSaved() {
+
+                    done();
+                    authStorage.events.removeListener("storageSaved", checkStorageSaved);
+                }
+
+                function waitStorageClean() {
+                    if (!authStorage.dirty) {
+
+                        authStorage.events.on("storageSaved", checkStorageSaved);
+
+                        action();
+
+                    } else {
+
+                        setTimeout(waitStorageClean, 10);
+                    }
+
+                }
+
+                waitStorageClean();
+
+            });
+
+            it("set dirty to false", function() {
+                expect(authStorage.dirty).to.be.equal(false);
+            });
+        });
+    }
+
+
+
     describe("saveUser", function() {
-        var user;
+        var user,
+            dirtyAtStart;
 
         before(function(done) {
+            dirtyAtStart = authStorage.dirty;
             authStorage.saveUser({
                 username: "parroit",
                 password: "piripicchio",
@@ -42,6 +99,26 @@ describe("AuthStorage", function() {
         it("user object is stored", function() {
             expect(user).to.be.an("object");
         });
+
+        it("dirty false at start", function() {
+            expect(dirtyAtStart).to.be.equal(false);
+        });
+
+        it("set storage to dirty", function() {
+            expect(authStorage.dirty).to.be.equal(true);
+        });
+
+
+        itInvokeStorageSave(function() {
+            authStorage.saveUser({
+                username: "parroit2",
+                password: "piripicchio",
+                fullname: "Andrea Parodi",
+                email: "andrea.parodi@ebansoftware.net",
+                status: "pending"
+            });
+        });
+
     });
 
     function getParroit(cb) {
@@ -115,6 +192,10 @@ describe("AuthStorage", function() {
 
         it("user object is removed", function() {
             expect(user).to.be.equal(null);
+        });
+
+        itInvokeStorageSave(function() {
+            authStorage.removeUser("parroit2");
         });
     });
 });
