@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
-				"root",
-				"rootFolder"
+				"mim",
+				"mimeIcon"
+			],
+			[
+				"icon",
+				"icons"
+			],
+			[
+				"path",
+				"pathEncoded"
+			],
+			[
+				"wr",
+				"writeStat"
 			],
 			[
 				"fol",
-				"fold1"
+				"folderPath"
+			],
+			[
+				"lis",
+				"listFiles"
+			],
+			[
+				"root",
+				"rootFolder"
 			],
 			[
 				"on",
@@ -494,63 +514,11 @@
 			[
 				"rout",
 				"routeParams"
-			],
-			[
-				"fo",
-				"font-size"
-			],
-			[
-				"off",
-				"offlineHandler"
-			],
-			[
-				"codie",
-				"codiceSistema"
-			],
-			[
-				"co",
-				"continuousChecking"
-			],
-			[
-				"tim",
-				"timeStamp"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "client/js/folders.js",
-			"settings":
-			{
-				"buffer_size": 1485,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/parroit/Scrivania/a.html",
-			"settings":
-			{
-				"buffer_size": 936,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/css/webdisk.less",
-			"settings":
-			{
-				"buffer_size": 321,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/js/files.js",
-			"settings":
-			{
-				"buffer_size": 806,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -655,13 +623,22 @@
 	},
 	"file_history":
 	[
+		"/home/parroit/src/webdisk/test/webdisk_test.js",
+		"/home/parroit/src/webdisk/client/img/application-javascript.png",
 		"/home/parroit/src/webdisk/client/js/files.js",
 		"/home/parroit/src/webdisk/lib/webdisk.js",
-		"/home/parroit/src/webdisk/test/webdisk_test.js",
 		"/home/parroit/src/webdisk/lib/routes.js",
+		"/home/parroit/src/webdisk/test/strange/strange file ' name",
+		"/home/parroit/src/webdisk/test/strange/strage file'name",
+		"/home/parroit/src/ustore/src/files/files_app.py",
+		"/home/parroit/src/webdisk/lib/server.js",
 		"/home/parroit/src/webdisk/views/index.html",
-		"/home/parroit/src/webdisk/client/js/index.js",
+		"/home/parroit/src/webdisk/views/files-toolbar.html",
+		"/home/parroit/src/webdisk/test/strange/1.strange",
 		"/home/parroit/src/webdisk/client/css/webdisk.less",
+		"/home/parroit/src/webdisk/client/js/folders.js",
+		"/home/parroit/Scrivania/a.html",
+		"/home/parroit/src/webdisk/client/js/index.js",
 		"/home/parroit/src/webdisk/views/layout.html",
 		"/home/parroit/src/webdisk/test/only-folders/fold1/remove.this",
 		"/home/parroit/src/webdisk/test/files/fold2/remove.this",
@@ -773,16 +750,7 @@
 		"/C/src/auth/lib/auth-storage.js",
 		"/C/src/auth/output.md",
 		"/C/selex/SSIMobileFase1/js/view.js",
-		"/C/selex/SSIMobileFase1/js/webservice-client.js",
-		"/C/src/Console2/README",
-		"/C/selex/SSIMobileFase1/js/utils.js",
-		"/C/selex/SSIMobileFase1/js/fowler.js",
-		"/C/selex/SSIMobileFase1/js/AllarmiView.js",
-		"/C/selex/SSIMobileFase1/js/alchimist.js",
-		"/C/selex/SSIMobileFase1/Gruntfile.js",
-		"/C/selex/SSIMobileFase1/test/phantomjs/start-page.js",
-		"/C/selex/SSIMobileFase1/test/phantomjs/ssimobile-pages.html",
-		"/C/selex/SSIMobileFase1/node_modules/grunt-mocha-test/node_modules/mocha/lib/template.html"
+		"/C/selex/SSIMobileFase1/js/webservice-client.js"
 	],
 	"find":
 	{
@@ -849,6 +817,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"webdisk.readFile(\"test/files/1.txt\")",
+			"\"",
+			"mime",
+			"fullPath",
+			"relativePath",
+			"output",
+			"Output",
+			"output",
+			".listFile",
+			"listFile",
 			"root",
 			"process.cwd()",
 			"path",
@@ -966,17 +944,7 @@
 			"callAlarmList",
 			"readAlarmList",
 			"callAlarmList",
-			"pageSize",
-			"fromTimer",
-			"timeFilters",
-			"readAlarmList",
-			"page",
-			"dayPrev_onclick",
-			"td",
-			"tr",
-			"table",
-			"search-btn",
-			"date-prev"
+			"pageSize"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1066,128 +1034,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/js/folders.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1485,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								923,
-								923
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 459.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/parroit/Scrivania/a.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								458,
-								458
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 221.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/css/webdisk.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 321,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								237,
-								237
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/js/files.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 806,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								528,
-								528
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
