@@ -41,14 +41,16 @@
     </div>
 </div>
 
-{{#yield-scripts}}
-<script src="/jquery-ui/ui/jquery-ui.js">
-</script>
-
+{{#yield-styles}}
 <link rel="stylesheet" href="/fancytree/dist/skin-win7/ui.fancytree.css" />
+{{/yield-styles}}
 
-<script src="/fancytree/dist/jquery.fancytree-all.js">
-</script>
+
+{{#yield-scripts}}
+<script src="/jquery-ui/ui/jquery-ui.js"></script>
+<script src="/fancytree/dist/jquery.fancytree-all.js"></script>
+<script src="/eventEmitter/EventEmitter.js"></script>
+
 <script src="/js/files.js"></script>
 <script src="/js/folders.js"></script>
 

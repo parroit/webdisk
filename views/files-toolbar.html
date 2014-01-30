@@ -1,62 +1,47 @@
 <div class="btn-toolbar" role="toolbar">
-  <div class="btn-group">
-  	<button 
-  		type="button" 
-  		class="btn btn-primary"
-  		title="upload file">
-  		<span class="glyphicon glyphicon-cloud-upload"></span>
-  	</button>
-	
-      <button 
-  		type="button" 
-  		class="btn btn-primary"
-  		title="download file">
-  		<span class="glyphicon glyphicon-cloud-download"></span>
-  		
-  	</button>
-  	
-  </div>
-  
-  <div class="btn-group">
-  	<button 
-  		type="button" 
-  		class="btn btn-danger"
-  		title="delete file">
-  		<span class="glyphicon glyphicon-remove"></span>
-  		
-  	</button>
-		<button 
-  		type="button" 
-  		class="btn btn-danger"
-  		title="move file">
-  		<span class="glyphicon glyphicon-export"></span>
-  		
-  	</button>
-  	<button 
-  		type="button" 
-  		class="btn btn-default"
-  		title="rename file">
-  		<span class="glyphicon glyphicon-pencil"></span>
-  		
-  	</button>
-  </div>
+    <div class="btn-group">
+        <button id="upload-btn" type="button" class="btn btn-primary" title="add files">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
 
-  <div class="btn-group">
-  	<button 
-  		type="button" 
-  		class="btn btn-primary"
-  		title="account">
-  		<span class="glyphicon glyphicon-user"></span>
-  		
-  	</button>
-		<button 
-  		type="button" 
-  		class="btn btn-default"
-  		title="settings">
-  		<span class="glyphicon glyphicon-wrench"></span>
-  		
-  	</button>
-		
-  </div>
-  
+        <button disabled id="upload-btn" type="button" class="btn btn-primary" title="upload">
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+        </button>
+
+        <button disabled id="download-btn" type="button" class="btn btn-primary" title="download file">
+            <span class="glyphicon glyphicon-cloud-download"></span>
+
+        </button>
+
+    </div>
+
+    <div class="btn-group">
+        <button disabled id="remove-btn" type="button" class="btn btn-danger" title="delete file">
+            <span class="glyphicon glyphicon-remove"></span>
+
+        </button>
+
+        <button disabled id="move-btn" type="button" class="btn btn-danger" title="move file">
+            <span class="glyphicon glyphicon-export"></span>
+
+        </button>
+        <button disabled id="rename-btn" type="button" class="btn btn-default" title="rename file">
+            <span class="glyphicon glyphicon-pencil"></span>
+
+        </button>
+    </div>
+
+    <div class="btn-group pull-right">
+        <button href="/account" type="button" class="btn btn-primary" title="account">
+            <span class="glyphicon glyphicon-user"></span>
+
+        </button>
+
+        <button href="/settings" type="button" class="btn btn-default" title="settings">
+            <span class="glyphicon glyphicon-wrench"></span>
+
+        </button>
+
+    </div>
+
 </div>

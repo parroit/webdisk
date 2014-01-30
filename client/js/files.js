@@ -1,4 +1,29 @@
-(function(exports, global) {
+
+
+(function model(exports, global) {
+	var filesModel = {
+		events: new EventEmitter(),
+		readFiles: readFiles
+	};
+
+	function readFiles(folder) {
+		var url = "files/" + encodeURIComponent(folder);
+		$("#files tbody").html("");
+		$.get(url)
+
+		.fail(onFailure)
+
+		.done(function(files) {
+			files.forEach(addFile);
+		});
+	}
+
+	exports.files = {
+		model: filesModel
+	};
+})(window, window);
+
+(function view(exports, global) {
 	var $ = global.jQuery;
 
 	function addFile(file) {
@@ -14,22 +39,25 @@
 			);
 
 		var $name = tr.find(".name");
-		$name.append("<img src='/img/"+file.icon  + "''>");
-		$name.append("&nbsp;<span>"+ file.name + "</span>");
+		$name.append(
+			"<img src='/img/" + file.icon + "''>" +
+			"&nbsp;<span>" + file.name + "</span>"
+		);
+
 		tr.find(".size").text(file.size);
 		tr.find(".uploaded").text(file.uploaded);
-		
-		var pathEncoded = encodeURIComponent(file.path).replace(/\'/g,"&apos;");
+
+		var pathEncoded = encodeURIComponent(file.path).replace(/\'/g, "&apos;");
 		console.log(pathEncoded);
 
 		tr.find(".actions").html(
-			"<a "+
-				"target='_blank' "+
-				"href='/download/"+pathEncoded+"' "+
-				"class='btn btn-primary download-file' "+
-				"title='download file'>"+
-				
-				"<span class='glyphicon glyphicon-cloud-download'></span>"+
+			"<a " +
+			"target='_blank' " +
+			"href='/download/" + pathEncoded + "' " +
+			"class='btn btn-primary download-file' " +
+			"title='download file'>" +
+
+			"<span class='glyphicon glyphicon-cloud-download'></span>" +
 			"</a>"
 		);
 
@@ -42,7 +70,7 @@
 	}
 
 	function readFiles(folder) {
-		var url = "files/"+encodeURIComponent(folder);
+		var url = "files/" + encodeURIComponent(folder);
 		$("#files tbody").html("");
 		$.get(url)
 

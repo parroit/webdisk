@@ -14,9 +14,8 @@
     "momentjs": "~2.5.1",
     "bootstrap": "~3.0.3",
     "jquery-ui": "~1.10.3",
-    "fancytree": "~2.0.0"
-
-  
+    "fancytree": "~2.0.0",
+    "eventEmitter": "~4.2.7"
   },
   "ignore": [
     "**/.*",

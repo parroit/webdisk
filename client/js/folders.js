@@ -44,7 +44,7 @@
             click: function(event, data){
                 if (data.targetType === "title") {
                     var node = data.node;
-                    global.files.readFiles(node.key);    
+                    global.files.model.readFiles(node.key);    
                 }
                 
             },
