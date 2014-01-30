@@ -1,0 +1,55 @@
+<div class="row full-height">
+    <div class="col-md-3 full-height">
+        <div class="panel panel-default full-height">
+            <div class="panel-heading">
+                {{> folders-toolbar }}
+
+            </div>
+            <div class="panel-body full-height">
+                <div class="folders-tree full-expand"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9 full-height">
+        <div class="panel panel-default full-height">
+            <div class="panel-heading">
+                {{> files-toolbar }}
+
+
+            </div>
+            <div class="panel-body full-height">
+                <div class="full-expand">
+                    <table class="table full-expand" id="files">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Size</th>
+                                <th>Uploaded</th>
+                                <th>&nbsp;</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#yield-scripts}}
+<script src="/jquery-ui/ui/jquery-ui.js">
+</script>
+
+<link rel="stylesheet" href="/fancytree/dist/skin-win7/ui.fancytree.css" />
+
+<script src="/fancytree/dist/jquery.fancytree-all.js">
+</script>
+<script src="/js/files.js"></script>
+<script src="/js/folders.js"></script>
+
+{{/yield-scripts}}
