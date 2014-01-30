@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"sele",
+				"selectionButtons"
+			],
+			[
+				"file",
+				"filesModel"
+			],
+			[
+				"files",
+				"filesModel"
+			],
+			[
+				"se",
+				"selection"
+			],
+			[
+				"pa",
+				"path"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"ret",
+				"retries"
+			],
+			[
+				"rea",
+				"readSessionData"
+			],
+			[
+				"exis",
+				"exists"
+			],
+			[
+				"m",
+				"mkdir"
+			],
+			[
+				"SE",
+				"SessionDiskStore"
+			],
+			[
 				"us",
 				"user"
 			],
@@ -348,10 +392,6 @@
 				"hasFilters"
 			],
 			[
-				"file",
-				"fileInfo"
-			],
-			[
 				"mac",
 				"matcher"
 			],
@@ -366,10 +406,6 @@
 			[
 				"cmd",
 				"cmdArgs"
-			],
-			[
-				"pa",
-				"parsedOptions"
 			],
 			[
 				"comm",
@@ -478,68 +514,24 @@
 			[
 				"impianto",
 				"nomeImpianto"
-			],
-			[
-				"pla",
-				"plantTags"
-			],
-			[
-				"cu",
-				"currentPost"
-			],
-			[
-				"time",
-				"timeRange"
-			],
-			[
-				"to",
-				"toLowerCase"
-			],
-			[
-				"al",
-				"alarm"
-			],
-			[
-				"packa",
-				"packageName"
-			],
-			[
-				"pack",
-				"packageName"
-			],
-			[
-				"requi",
-				"requirePackage"
-			],
-			[
-				"paca",
-				"packageVersion"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "node_modules/passport/lib/middleware/authenticate.js",
+			"file": "client/js/files.js",
 			"settings":
 			{
-				"buffer_size": 11978,
-				"line_ending": "Unix"
+				"buffer_size": 2747,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "lib/app-configure.js",
+			"file": "views/files-toolbar.html",
 			"settings":
 			{
-				"buffer_size": 1510,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/session-disk-store.js",
-			"settings":
-			{
-				"buffer_size": 3950,
+				"buffer_size": 1591,
 				"line_ending": "Windows"
 			}
 		}
@@ -651,25 +643,41 @@
 	},
 	"file_history":
 	[
-		"/home/parroit/Scrivania/src/app-bp/app-bp/lib/server/SessionDiskStore.js",
-		"/home/parroit/src/webdisk/lib/passport-strategy.js",
-		"/home/parroit/src/webdisk/lib/routes-map.js",
-		"/home/parroit/src/webdisk/lib/routes.js",
-		"/home/parroit/src/webdisk/node_modules/passport-local/lib/passport-local/strategy.js",
-		"/home/parroit/src/webdisk/lib/auth-routes.js",
-		"/home/parroit/src/webdisk/views/layout.html",
-		"/home/parroit/src/webdisk/views/index.html",
+		"/home/parroit/src/webdisk/bower.json",
 		"/home/parroit/src/webdisk/client/css/index.less",
+		"/home/parroit/src/webdisk/client/js/folders.js",
+		"/home/parroit/src/webdisk/views/files.html",
+		"/home/parroit/src/webdisk/views/files-toolbar.html",
+		"/home/parroit/src/webdisk/views/folders-toolbar.html",
+		"/home/parroit/src/webdisk/client/js/upload.js",
+		"/home/parroit/src/webdisk/views/upload.html",
+		"/home/parroit/src/webdisk/views/layout.html",
+		"/home/parroit/src/webdisk/lib/routes-map.js",
+		"/home/parroit/src/webdisk/client/vendor/jQuery-File-Upload-9.5.4/basic-plus.html",
+		"/home/parroit/src/webdisk/lib/passport-strategy.js",
+		"/home/parroit/src/webdisk/lib/routes.js",
 		"/home/parroit/src/webdisk/views/login.html",
-		"/home/parroit/src/webdisk/lib/auth-storage.js",
+		"/home/parroit/src/webdisk/client/css/webdisk.less",
+		"/home/parroit/src/webdisk/client/css/flashes.less",
+		"/home/parroit/src/webdisk/config/users.json",
+		"/home/parroit/src/webdisk/views/navbar.html",
+		"/home/parroit/src/webdisk/lib/auth-routes.js",
+		"/home/parroit/src/webdisk/views/index.html",
+		"/home/parroit/.zshrc",
+		"/media/parroit/Elements/src/webdisk/.gitignore",
+		"/home/parroit/src/webdisk/lib/session-disk-store.js",
 		"/home/parroit/src/webdisk/lib/app-configure.js",
 		"/home/parroit/src/webdisk/config/config.json",
+		"/home/parroit/src/webdisk/node_modules/express/node_modules/connect/lib/middleware/session/store.js",
+		"/home/parroit/src/webdisk/node_modules/express/node_modules/connect/lib/middleware/session/session.js",
+		"/home/parroit/src/webdisk/sessions/S0h5UUFEUm0yREtwQ25xY1pCc25ESVJE.txt",
+		"/home/parroit/src/webdisk/node_modules/passport/lib/middleware/authenticate.js",
+		"/home/parroit/Scrivania/src/app-bp/app-bp/lib/server/SessionDiskStore.js",
+		"/home/parroit/src/webdisk/node_modules/passport-local/lib/passport-local/strategy.js",
+		"/home/parroit/src/webdisk/lib/auth-storage.js",
 		"/home/parroit/src/webdisk/client/css/login.less",
-		"/home/parroit/src/webdisk/client/css/webdisk.less",
 		"/home/parroit/src/webdisk/client/js/login.js",
 		"/home/parroit/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/home/parroit/.zshrc",
-		"/home/parroit/src/webdisk/config/users.json",
 		"/home/parroit/src/webdisk/test/auth-storage-test.js",
 		"/home/parroit/src/webdisk/test/user-storage/users.json",
 		"/home/parroit/src/webdisk/test/webdisk_test.js",
@@ -683,15 +691,12 @@
 		"/home/parroit/src/webdisk/test/strange/strange file ' name",
 		"/home/parroit/src/webdisk/test/strange/strage file'name",
 		"/home/parroit/src/ustore/src/files/files_app.py",
-		"/home/parroit/src/webdisk/views/files-toolbar.html",
 		"/home/parroit/src/webdisk/test/strange/1.strange",
-		"/home/parroit/src/webdisk/client/js/folders.js",
 		"/home/parroit/Scrivania/a.html",
 		"/home/parroit/src/webdisk/client/js/index.js",
 		"/home/parroit/src/webdisk/test/only-folders/fold1/remove.this",
 		"/home/parroit/src/webdisk/test/files/fold2/remove.this",
 		"/home/parroit/src/webdisk/bower_components/fancytree/dist/jquery.fancytree-2.0.0-5.zip",
-		"/home/parroit/src/webdisk/bower.json",
 		"/home/parroit/src/webdisk/bower_components/fancytree/Gruntfile.coffee",
 		"/home/parroit/src/webdisk/test/files/1.txt",
 		"/home/parroit/src/webdisk/test/files/2.txt",
@@ -765,20 +770,7 @@
 		"/C/selex/rho-mobile/test-upgrade/main.appcache",
 		"/C/selex/rho-mobile/test-upgrade/index.html",
 		"/C/selex/rho-mobile/appcache-builder/node_modules/stdio/main.js",
-		"/C/selex/rho-mobile/test-upgrade/bower.json",
-		"/C/selex/rho-mobile/upgrader/bower.json",
-		"/C/selex/rho-mobile/upgrader/bower_components/Buttons/.bower.json",
-		"/C/selex/rho-mobile/upgrader/bower_components/Buttons/bower.json",
-		"/C/selex/rho-mobile/upgrader/bower_components/jquery/bower.json",
-		"/C/selex/rho-mobile/upgrader/bower_components/nprogress/bower.json",
-		"/C/Programmi/nodejs.1.10.21/npm",
-		"/C/Documents and Settings/parroit/Dati applicazioni/npm/bower",
-		"/C/Documents and Settings/parroit/.zshrc",
-		"/C/Documents and Settings/parroit/.oh-my-zsh/themes/robbyrussell.zsh-theme",
-		"/C/selex/rho-mobile/upgrader/.gitignore",
-		"/C/Documents and Settings/parroit/.zshrc.pre-oh-my-zsh",
-		"/C/Documents and Settings/parroit/install.sh",
-		"/C/selex/rho-mobile/test-upgrade/upgrader/upgrade.html"
+		"/C/selex/rho-mobile/test-upgrade/bower.json"
 	],
 	"find":
 	{
@@ -843,9 +835,21 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"    ",
+			"'",
+			"icon",
+			"</i>",
+			"<i ",
+			"i",
+			"fn",
+			"get(",
+			"getSessionPath",
+			"'",
+			"//noinspection",
+			"self",
 			"PASSPORT",
 			"'",
 			"'local'",
@@ -961,26 +965,16 @@
 			"setTimeStamp",
 			"onPlayRequest",
 			"NewAlarms",
-			"buildLabeledFieldsTableArray",
-			"readAlarmList",
-			"allarmico",
-			"alarm_onclick",
-			"height:",
-			"alarm",
-			"col5",
-			"btn-tile",
-			"alarm-area",
-			"impiantiPlaceHolder",
-			"machinery-list",
-			"choose-btn",
-			"impiantiPlaceHolder"
+			"buildLabeledFieldsTableArray"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\t",
+			"cb",
 			"    ",
 			"font/",
 			"%20",
@@ -1064,59 +1058,58 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "node_modules/passport/lib/middleware/authenticate.js",
+					"file": "client/js/files.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11978,
+						"buffer_size": 2747,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7420,
-								7420
+								696,
+								696
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2955.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "lib/app-configure.js",
+					"file": "views/files-toolbar.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1510,
+						"buffer_size": 1591,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								539,
-								539
+								621,
+								621
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1125,36 +1118,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/session-disk-store.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3950,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1321,
-								1321
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1240,7 +1203,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 402.0,
+	"side_bar_width": 329.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

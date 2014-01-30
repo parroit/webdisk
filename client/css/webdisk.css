@@ -2,6 +2,9 @@ body {
   overflow: hidden;
   padding: 10px;
 }
+tr {
+  cursor: pointer;
+}
 .full-height {
   height: 98%;
 }
