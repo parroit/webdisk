@@ -8,20 +8,30 @@
 
 	function readFiles(folder) {
 		var url = "files/" + encodeURIComponent(folder);
-		$("#files tbody").html("");
+		
 		$.get(url)
 
 		.fail(onFailure)
 
 		.done(function(files) {
-			files.forEach(addFile);
+			filesModel.files = files;
+			filesModel.events.emit("filesChanged");
+			
 		});
+	}
+	
+	function onFailure(xhr, textStatus, error) {
+		console.log(textStatus + ": " + error);
 	}
 
 	exports.files = {
 		model: filesModel
 	};
+
+	readFiles("parroit");
+
 })(window, window);
+
 
 (function view(exports, global) {
 	var $ = global.jQuery;
@@ -65,27 +75,16 @@
 
 	}
 
-	function onFailure(xhr, textStatus, error) {
-		console.log(textStatus + ": " + error);
-	}
+	
 
-	function readFiles(folder) {
-		var url = "files/" + encodeURIComponent(folder);
+	
+
+	global.files.model.events.on("filesChanged",function(){
 		$("#files tbody").html("");
-		$.get(url)
+		global.files.model.files.forEach(addFile);
+	});
 
-		.fail(onFailure)
-
-		.done(function(files) {
-			files.forEach(addFile);
-		});
-	}
-
-	exports.files = {
-		readFiles: readFiles
-	};
-
-	readFiles("parroit");
+	
 
 
 })(window, window);
