@@ -12,7 +12,11 @@
 </head>
 
 <body class="full-height">
+
+{{> navbar }}
 	
+
+
 {{{ yield }}}
 
 
@@ -23,14 +27,6 @@
 
 {{{ yield-scripts }}}
 
-<div class="bottom">
-    {{#user}}
-    {{fullname}}
-    {{/user}}
-    {{^user}}
-    anonymous
-    {{/user}}
-</div>
 </body>
 
 
