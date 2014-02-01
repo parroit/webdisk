@@ -23,6 +23,13 @@
 			icon.addClass("glyphicon-exclamation-sign red");
 		}
 
+		dialog.find(".ok-btn").click(function(e) {
+			dialog.find(".ok-btn").off("click");
+			if (cb) {
+				cb();
+			}
+		});
+
 		dialog.attr("aria-labelledby", title);
 		dialog.find(".modal-title").html(title);
 		dialog.find(".msgbox-content").html(content);
@@ -38,11 +45,15 @@
 		dialog.find(".msgbox-content").html(content);
 
 
-		dialog.find(".yes-btn").click (function (e) {
+		dialog.find(".yes-btn").click(function(e) {
+			dialog.find(".yes-btn").off("click");
+			dialog.find(".no-btn").off("click");
 			cb("yes");
 		});
 
-		dialog.find(".no-btn").click (function (e) {
+		dialog.find(".no-btn").click(function(e) {
+			dialog.find(".yes-btn").off("click");
+			dialog.find(".no-btn").off("click");
 			cb("no");
 		});
 
@@ -90,7 +101,28 @@
 					},
 					error: onFailure,
 					success: function(data) {
-						msgbox("Successfully deleted files", JSON.stringify(data.files));
+						if (!data.ok) {
+							msgbox(
+								"An error has occurred",
+								"Action could not be accomplished, " +
+								"an error has occurred <br>" +
+								data.reason,
+								"failure"
+							);
+							return;
+						}
+						msgbox("Successfully deleted files", data.files.join(", "), "success" ,function() {
+							selectedFiles.forEach(function(file) {
+								var idx =  filesModel.files.map(function(f){
+									return f.path;
+								}).indexOf(file);
+
+								filesModel.files.splice(idx,1);
+								filesModel.events.emit("fileRemoved", file);
+								filesModel.events.emit("selectionEmpty");
+							});
+						});
+
 					}
 				});
 			}
@@ -138,7 +170,7 @@
 	}
 
 	function onFailure(xhr, textStatus, error) {
-		msgbox("An error has occurred","Action could not be accomplished, an error has occurred <br>"+ textStatus + ": " + error,"failure");
+		msgbox("An error has occurred", "Action could not be accomplished, an error has occurred <br>" + textStatus + ": " + error, "failure");
 	}
 
 	exports.files = {
@@ -172,7 +204,7 @@
 
 			$name = tr.find(".name");
 
-		tr.attr("id", file.path);
+		tr.attr("id", btoa(file.path));
 
 		$name.append(
 			"<img src='/img/" + file.icon + "''>" +
@@ -199,18 +231,21 @@
 	}
 
 	function toggleSelection() {
-		var path = $(this).attr("id");
+		var path = atob($(this).attr("id"));
 
 		$(this).toggleClass("info");
 		filesModel.toggleFileSelection(path);
 
 	}
 
+	function registerButtonHandlers() {
+		$("#remove-btn").click(filesModel.deleteSelected);
+	}
 
 	function registerFilesHandlers() {
 		$("tr").click(toggleSelection);
 
-		$("#remove-btn").click(filesModel.deleteSelected);
+
 	}
 
 
@@ -221,7 +256,13 @@
 		registerFilesHandlers();
 	});
 
-
+	filesModel.events.on("fileRemoved", function(filePath) {
+		var tr = $("#" + btoa(filePath).replace(/=/g, "\\="));
+		tr.css("opacity", 0);
+		setTimeout(function() {
+			tr.remove();
+		}, 300);
+	});
 
 	filesModel.events.on("selectionNotEmpty", function() {
 		selectionButtons.removeAttr("disabled");
@@ -235,7 +276,7 @@
 
 
 
-	//exports.files.view = filesView;
+	registerButtonHandlers();
 
 
 })(window, window);

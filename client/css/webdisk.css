@@ -4,6 +4,7 @@ body {
 }
 tr {
   cursor: pointer;
+  transition: opacity 0.3s;
 }
 .full-height {
   height: 98%;

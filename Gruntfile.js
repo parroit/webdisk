@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-express-server');
 
 
-    grunt.registerTask('server', 'watch:server');
+    grunt.registerTask('server', ['express:server','watch:server']);
     grunt.registerTask('test', 'mochaTest');
     grunt.registerTask('watch-test', 'watch:test');
 
