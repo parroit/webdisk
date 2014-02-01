@@ -2,16 +2,17 @@
 
 	var EventEmitter = global.EventEmitter,
 		$ = global.jQuery,
-		
+
 		filesModel = {
-			currentFolder:"",
+			currentFolder: "",
 			events: new EventEmitter(),
 			files: [],
 			toggleFileSelection: toggleFileSelection,
 			selection: selection,
 			readFiles: readFiles,
 			deleteSelected: deleteSelected,
-			uploadFilesChanged: uploadFilesChanged
+			uploadFilesChanged: uploadFilesChanged,
+			uploadLocalFiles: uploadLocalFiles
 		};
 
 
@@ -20,8 +21,8 @@
 			var file = files[i];
 			filesModel.files.push({
 				name: file.name,
-				path: currentFolder+"/" + file.name,
-				icon: file.type.replace(/\//g,"-")+".png",
+				path: filesModel.currentFolder + "/" + file.name,
+				icon: file.type.replace(/\//g, "-") + ".png",
 				uploaded: "not yet",
 				size: file.size,
 				domFile: file
@@ -31,8 +32,41 @@
 		filesModel.events.emit("filesChanged");
 	}
 
-	function uploadLocalFiles(){
+	function onUploadSucceded(file) {
+		return function(data) {
+			if (data.ok) {
+				file.domFile = null;
+				file.uploaded = new Date().getTime();
+				return filesModel.events.emit("filesChanged");
+			}
+			msgbox(
+				"An error has occurred",
+				file.name + " could not be uploaded, an error has occurred <br>" +
+				data.reason
+			);
+		};
+	}
 
+	function uploadLocalFiles() {
+		var i = 0,
+			l = filesModel.files.length;
+
+
+		for (; i < l; i++) {
+			var file = filesModel.files[i];
+			if (file.domFile) {
+				$.ajax({
+					type: "POST",
+					url: "/upload/" + encodeURIComponent(file.path),
+					data: file.domFile,
+					processData: false,
+					contentType: false,
+					error: onFailure,
+					success: onUploadSucceded(file)
+				});
+			}
+
+		}
 	}
 
 	function msgbox(title, content, type, cb) {
@@ -188,7 +222,7 @@
 		.fail(onFailure)
 
 		.done(function(files) {
-			currentFolder = folder;
+			filesModel.currentFolder = folder;
 			filesModel.files = files;
 			filesModel.events.emit("filesChanged");
 
@@ -254,6 +288,7 @@
 
 		if (file.domFile) {
 			tr.addClass("warning");
+			$("#upload-local-files-btn").removeAttr("disabled");
 		}
 
 		body.append(tr);
@@ -271,7 +306,7 @@
 	function registerButtonHandlers() {
 		$("#remove-btn").click(filesModel.deleteSelected);
 		$("#upload-btn").click(function() {
-			$("#file-chooser").trigger('click');
+			$("#file-chooser").trigger("click");
 		});
 
 		$("#file-chooser").change(function() {
@@ -280,7 +315,7 @@
 
 		$("#upload-local-files-btn").click(function() {
 			filesModel.uploadLocalFiles();
-			
+
 		});
 
 	}
@@ -295,6 +330,7 @@
 
 	filesModel.events.on("filesChanged", function() {
 		$("#files tbody").html("");
+		$("#upload-local-files-btn").attr("disabled", "");
 		global.files.model.files.forEach(addFile);
 		registerFilesHandlers();
 	});
