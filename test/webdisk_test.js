@@ -44,6 +44,71 @@ describe("webdisk", function() {
         expect(webdisk).to.be.an("object");
     });
 
+    describe("writeFile", function() {
+        var outputFilePath = "test/files/file1",
+            stream;
+
+        before(function() {
+            stream = fs.createReadStream("test/files/1.txt");
+        });
+
+        after(function() {
+            if (fs.existsSync(outputFilePath)) {
+                fs.unlinkSync(outputFilePath);
+            }
+        });
+
+        it("is defined", function() {
+            expect(webdisk.writeFile).to.be.an("function");
+        });
+
+        it("return a Promise", function() {
+            expect(webdisk.writeFile("ciao/file1", stream).constructor.name).to.be.equal("Promise");
+        });
+
+        it("Promise rejected for non existent directory", function(done) {
+            webdisk.writeFile("do-not-exists/file1", stream)
+                .then(function(results) {
+                    if (!results.ok) {
+                        expect(results.reason).to.be.equal("directory do-not-exists not found");
+
+                        return done();
+                    }
+                    console.log("failure expected");
+
+                })
+
+            .then(null, function(err) {
+                console.log(err);
+            });
+
+
+        });
+
+
+
+        it("Promise resolved on file written", function(done) {
+            webdisk.writeFile(outputFilePath, fs.createReadStream("test/files/1.txt"))
+                .then(function(results) {
+                    if (results.ok) {
+                        expect(fs.readFileSync(outputFilePath, "utf8"))
+                            .to.be.equal("1.txt");
+
+                        return done();
+                    }
+                    console.log("success expected, but:" + results.reason);
+
+                })
+
+            .then(null, function(err) {
+                console.log(err);
+            });
+
+
+        });
+    });
+
+
     describe("readFile", function() {
         var stream;
 
@@ -258,15 +323,16 @@ describe("webdisk", function() {
 
         });
 
-        it("unknow file resolve with failure", function(done) {
+        it("unknown file resolve with failure", function(done) {
             webdisk.deleteFiles(["not-exists"])
                 .then(function(results) {
                     if (!results.ok) {
+
                         expect(results.reason).to.be.equal("file not-exists not found");
 
                         return done();
                     }
-                    console.log("failure expected");
+                    console.log("failure expected:" + JSON.stringify(results, null, "\t"));
 
                 })
 

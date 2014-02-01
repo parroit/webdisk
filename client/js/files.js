@@ -2,15 +2,38 @@
 
 	var EventEmitter = global.EventEmitter,
 		$ = global.jQuery,
+		
 		filesModel = {
+			currentFolder:"",
 			events: new EventEmitter(),
 			files: [],
 			toggleFileSelection: toggleFileSelection,
 			selection: selection,
 			readFiles: readFiles,
-			deleteSelected: deleteSelected
+			deleteSelected: deleteSelected,
+			uploadFilesChanged: uploadFilesChanged
 		};
 
+
+	function uploadFilesChanged(files) {
+		for (var i = 0; i < files.length; i++) {
+			var file = files[i];
+			filesModel.files.push({
+				name: file.name,
+				path: currentFolder+"/" + file.name,
+				icon: file.type.replace(/\//g,"-")+".png",
+				uploaded: "not yet",
+				size: file.size,
+				domFile: file
+
+			});
+		}
+		filesModel.events.emit("filesChanged");
+	}
+
+	function uploadLocalFiles(){
+
+	}
 
 	function msgbox(title, content, type, cb) {
 		var dialog = $("#msgbox"),
@@ -111,13 +134,13 @@
 							);
 							return;
 						}
-						msgbox("Successfully deleted files", data.files.join(", "), "success" ,function() {
+						msgbox("Successfully deleted files", data.files.join(", "), "success", function() {
 							selectedFiles.forEach(function(file) {
-								var idx =  filesModel.files.map(function(f){
+								var idx = filesModel.files.map(function(f) {
 									return f.path;
 								}).indexOf(file);
 
-								filesModel.files.splice(idx,1);
+								filesModel.files.splice(idx, 1);
 								filesModel.events.emit("fileRemoved", file);
 								filesModel.events.emit("selectionEmpty");
 							});
@@ -158,11 +181,14 @@
 	function readFiles(folder) {
 		var url = "files/" + encodeURIComponent(folder);
 
+
+
 		$.get(url)
 
 		.fail(onFailure)
 
 		.done(function(files) {
+			currentFolder = folder;
 			filesModel.files = files;
 			filesModel.events.emit("filesChanged");
 
@@ -226,6 +252,10 @@
 			"</a>"
 		);
 
+		if (file.domFile) {
+			tr.addClass("warning");
+		}
+
 		body.append(tr);
 
 	}
@@ -240,6 +270,19 @@
 
 	function registerButtonHandlers() {
 		$("#remove-btn").click(filesModel.deleteSelected);
+		$("#upload-btn").click(function() {
+			$("#file-chooser").trigger('click');
+		});
+
+		$("#file-chooser").change(function() {
+			filesModel.uploadFilesChanged(this.files);
+		});
+
+		$("#upload-local-files-btn").click(function() {
+			filesModel.uploadLocalFiles();
+			
+		});
+
 	}
 
 	function registerFilesHandlers() {

@@ -23,6 +23,9 @@ tr {
   height: 5%;
   min-height: 50px;
 }
+#file-chooser {
+  display: none;
+}
 .colorgraph {
   height: 5px;
   border-top: 0;
