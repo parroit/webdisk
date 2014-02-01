@@ -244,9 +244,22 @@
 
 
 (function view(exports, global) {
-	var $ = global.jQuery,
+	var moment = global.moment,
+		$ = global.jQuery,
 		filesModel = global.files.model,
 		selectionButtons = $("#download-btn, #remove-btn, #move-btn, #rename-btn");
+
+	function humanFileSize(bytes, si) {
+		var thresh = si ? 1000 : 1024;
+		if (bytes < thresh) return bytes + ' B';
+		var units = si ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+		var u = -1;
+		do {
+			bytes /= thresh;
+			++u;
+		} while (bytes >= thresh);
+		return bytes.toFixed(1) + ' ' + units[u];
+	};
 
 	function addFile(file) {
 		var body = $("#files tbody"),
@@ -271,8 +284,14 @@
 			"&nbsp;<span>" + file.name + "</span>"
 		);
 
-		tr.find(".size").text(file.size);
-		tr.find(".uploaded").text(file.uploaded);
+		tr.find(".size").text(humanFileSize(file.size));
+
+		var uploaded = file.uploaded;
+		if (typeof uploaded === "number") {
+			uploaded = moment(uploaded).calendar();
+
+		}
+		tr.find(".uploaded").text(uploaded);
 
 
 		tr.find(".actions").html(

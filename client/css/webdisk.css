@@ -26,6 +26,10 @@ tr {
 #file-chooser {
   display: none;
 }
+table.table > tbody > tr > td.size {
+  text-align: right;
+  padding-right: 40px;
+}
 .colorgraph {
   height: 5px;
   border-top: 0;
