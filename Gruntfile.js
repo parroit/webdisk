@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
@@ -10,6 +10,22 @@ module.exports = function (grunt) {
                 tasks: ['mochaTest'],
                 options: {
                     spawn: true
+                }
+            },
+            server: {
+                files: ['lib/**/*.js'],
+                tasks: ['express'],
+                options: {
+                    spawn: false
+                }
+            }
+        },
+        
+        express: {
+
+            server: {
+                options: {
+                    script: 'lib/server.js'
                 }
             }
         },
@@ -27,9 +43,12 @@ module.exports = function (grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-express-server');
 
+
+    grunt.registerTask('server', 'watch:server');
     grunt.registerTask('test', 'mochaTest');
-    grunt.registerTask('watch-test', 'watch');
+    grunt.registerTask('watch-test', 'watch:test');
 
 
 };

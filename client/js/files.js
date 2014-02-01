@@ -1,11 +1,55 @@
 (function model(exports, global) {
-	var filesModel = {
-		events: new EventEmitter(),
-		files: [],
-		toggleFileSelection: toggleFileSelection,
-		selection: selection,
-		readFiles: readFiles
-	};
+
+	var EventEmitter = global.EventEmitter,
+		$ = global.jQuery,
+		filesModel = {
+			events: new EventEmitter(),
+			files: [],
+			toggleFileSelection: toggleFileSelection,
+			selection: selection,
+			readFiles: readFiles,
+			deleteSelected: deleteSelected
+		};
+
+
+	function msgbox(title, content, type, cb) {
+		var dialog = $("#msgbox"),
+			icon = dialog.find(".modal-body .glyphicon");
+
+
+		if (!type || type === "success") {
+			icon.addClass("glyphicon-ok-circle green");
+		} else if (type === "failure") {
+			icon.addClass("glyphicon-exclamation-sign red");
+		}
+
+		dialog.attr("aria-labelledby", title);
+		dialog.find(".modal-title").html(title);
+		dialog.find(".msgbox-content").html(content);
+
+		dialog.modal("show");
+	}
+
+	function confirm(title, content, cb) {
+		var dialog = $("#confirm");
+
+		dialog.attr("aria-labelledby", title);
+		dialog.find(".modal-title").html(title);
+		dialog.find(".msgbox-content").html(content);
+
+
+		dialog.find(".yes-btn").click (function (e) {
+			cb("yes");
+		});
+
+		dialog.find(".no-btn").click (function (e) {
+			cb("no");
+		});
+
+		dialog.modal("show");
+	}
+
+
 
 	function selection() {
 		function isSelected(f) {
@@ -13,6 +57,46 @@
 		}
 
 		return filesModel.files.filter(isSelected);
+
+	}
+
+
+
+	function deleteSelected(cb) {
+		var url = "/files",
+
+			selectedFiles = selection().map(function(file) {
+				return file.path;
+			}),
+
+			selectedFilesNames = selection().map(function(file) {
+				return file.name;
+			}).join(", ");
+
+
+		confirm(
+			"Confirm file deletion.",
+			"Are you sure to delete files " + selectedFilesNames + " ?",
+			function(answer) {
+				if (answer === "no") {
+					return;
+				}
+
+				$.ajax({
+					type: "DELETE",
+					url: url,
+					headers: {
+						"files": JSON.stringify(selectedFiles)
+					},
+					error: onFailure,
+					success: function(data) {
+						msgbox("Successfully deleted files", JSON.stringify(data.files));
+					}
+				});
+			}
+		);
+
+
 
 	}
 
@@ -54,7 +138,7 @@
 	}
 
 	function onFailure(xhr, textStatus, error) {
-		console.log(textStatus + ": " + error);
+		msgbox("An error has occurred","Action could not be accomplished, an error has occurred <br>"+ textStatus + ": " + error,"failure");
 	}
 
 	exports.files = {
@@ -74,7 +158,7 @@
 
 	function addFile(file) {
 		var body = $("#files tbody"),
-			pathEncoded = encodeURIComponent(file.path).replace(/\'/g, "&apos;")
+			pathEncoded = encodeURIComponent(file.path).replace(/\'/g, "&apos;"),
 
 			tr = $(
 				"<tr>" +
@@ -114,13 +198,19 @@
 
 	}
 
-	function registerFilesHandlers() {
-		$("tr").click(function() {
-			var path = $(this).attr("id");
+	function toggleSelection() {
+		var path = $(this).attr("id");
 
-			$(this).toggleClass("info");
-			filesModel.toggleFileSelection(path);
-		});
+		$(this).toggleClass("info");
+		filesModel.toggleFileSelection(path);
+
+	}
+
+
+	function registerFilesHandlers() {
+		$("tr").click(toggleSelection);
+
+		$("#remove-btn").click(filesModel.deleteSelected);
 	}
 
 
@@ -140,7 +230,7 @@
 
 
 	filesModel.events.on("selectionEmpty", function() {
-		selectionButtons.attr("disabled","");
+		selectionButtons.attr("disabled", "");
 	});
 
 

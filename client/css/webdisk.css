@@ -40,6 +40,16 @@ tr {
 .flashes .alert {
   margin: 4px;
 }
+#msgbox .modal-body,
+#confirm .modal-body {
+  min-height: 200px;
+}
+#msgbox .modal-body .glyphicon,
+#confirm .modal-body .glyphicon {
+  font-size: 80pt;
+  position: relative;
+  top: 30px;
+}
 .navbar {
   margin-bottom: 5px;
 }
