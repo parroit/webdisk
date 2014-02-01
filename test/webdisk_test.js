@@ -21,9 +21,9 @@ describe("webdisk", function() {
         try {
             fs.unlinkSync("test/files/fold2/remove.this");
             fs.unlinkSync("test/only-folders/fold1/remove.this");
-    
-        }  catch(err){}
-        
+
+        } catch (err) {}
+
     });
 
     after(function() {
@@ -47,13 +47,13 @@ describe("webdisk", function() {
     describe("readFile", function() {
         var stream;
 
-        before(function(done){
-            webdisk.readFile("test/files/1.txt",function(err,data){
+        before(function(done) {
+            webdisk.readFile("test/files/1.txt", function(err, data) {
                 if (err)
                     return console.log(err);
                 stream = data;
                 done();
-            })
+            });
         });
 
         it("is defined", function() {
@@ -69,7 +69,7 @@ describe("webdisk", function() {
             expect(stream.mime).to.be.equal("text/plain");
         });
 
-         it("stream has name", function() {
+        it("stream has name", function() {
             expect(stream.name).to.be.equal("1.txt");
         });
 
@@ -78,19 +78,19 @@ describe("webdisk", function() {
         });
 
         it("unknown file has mime type application/octet-stream", function(done) {
-            webdisk.readFile("test/strange/1.strange",function(err,strange){
+            webdisk.readFile("test/strange/1.strange", function(err, strange) {
                 expect(strange.mime).to.be.equal("application/octet-stream");
                 done();
             });
-            
+
         });
 
         it("handle file with strange names", function(done) {
-            webdisk.readFile("test/strange/strange file ' name",function(err,strange){
+            webdisk.readFile("test/strange/strange file ' name", function(err, strange) {
                 expect(strange.size).to.be.equal(7);
                 done();
             });
-            
+
         });
 
 
@@ -135,7 +135,7 @@ describe("webdisk", function() {
                 expect(results[1].name).to.be.equal("strange file ' name");
                 done();
             }));
-            
+
         });
 
         it("return folder with only files as empty array", function(done) {
@@ -208,6 +208,76 @@ describe("webdisk", function() {
 
         });
     });
+
+
+    describe("deleteFiles", function() {
+        var files = [
+            "test/files/to-remove-1",
+            "test/files/to-remove-2"
+        ];
+
+        before(function() {
+            fs.writeFileSync(files[0], "remove this");
+            fs.writeFileSync(files[1], "remove this");
+        });
+
+        after(function() {
+            function deleteIt(f) {
+                if (fs.existsSync(f)) {
+                    fs.unlinkSync(f);
+                }
+            }
+            deleteIt(files[0]);
+            deleteIt(files[1]);
+        });
+
+        it("is defined", function() {
+            expect(webdisk.deleteFiles).to.be.an("function");
+        });
+
+        it("return a promise", function() {
+            expect(webdisk.deleteFiles([]).constructor.name).to.be.equal("Promise");
+        });
+
+        it("remove all files", function(done) {
+            webdisk.deleteFiles(files)
+                .then(function(results) {
+                    if (results.ok) {
+                        expect(fs.existsSync(files[0])).to.be.equal(false);
+                        expect(fs.existsSync(files[1])).to.be.equal(false);
+                        return done();
+                    }
+                    console.log("failure " + results.reason);
+
+                })
+
+            .then(null, function(err) {
+                console.log(err);
+            });
+
+
+        });
+
+        it("unknow file resolve with failure", function(done) {
+            webdisk.deleteFiles(["not-exists"])
+                .then(function(results) {
+                    if (!results.ok) {
+                        expect(results.reason).to.be.equal("file not-exists not found");
+
+                        return done();
+                    }
+                    console.log("failure expected");
+
+                })
+
+            .then(null, function(err) {
+                console.log(err);
+            });
+
+
+        });
+    });
+
 
     describe("listFolders", function() {
 
