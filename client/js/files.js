@@ -251,7 +251,7 @@
 			bytes /= thresh;
 			++u;
 		} while (bytes >= thresh);
-		return bytes.toFixed(1) + "" + units[u];
+		return bytes.toFixed(1) + " " + units[u];
 	}
 
 	function addFile(file) {
@@ -277,7 +277,7 @@
 			"&nbsp;<span>" + file.name + "</span>"
 		);
 
-		tr.find(".size").text(humanFileSize(file.size));
+		tr.find(".size").text(humanFileSize(file.size,true));
 
 		var uploaded = file.uploaded;
 		if (typeof uploaded === "number") {

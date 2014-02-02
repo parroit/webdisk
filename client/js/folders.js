@@ -11,7 +11,6 @@
 
     function createFolderNode(folder) {
         return {
-
             title: folder.name,
             key: folder.path,
             children: [],
@@ -34,13 +33,27 @@
 
     }
 
+
     function readFolders() {
 
-        var data = createFolderNode({
-            name: "parroit",
-            path: "parroit"
-        });
+        $.getJSON("/folders/parroit")
+            .fail(onFailure)
+            .done(function(folders) {
+                if (folders.error || folders.reason) {
+                    return utils.flashError(
+                        "Action could not be accomplished, an error has occurred <br>" +
+                        folders.reason
+                    );
+                }
 
+                var data = folders.map(function(f) {
+                    return createFolderNode(f);
+                });
+                createTree(data);
+            });
+    }
+
+    function createTree(data) {
         $(".folders-tree").fancytree({
             click: function(event, data) {
                 if (data.targetType === "title") {
@@ -49,7 +62,7 @@
                 }
 
             },
-            loaderror: function(e,err) {
+            loaderror: function(e, err) {
                 utils.flashError(err.details);
                 e.preventDefault();
                 err.message = "";
@@ -67,7 +80,7 @@
             clickFolderMode: 2,
             lazyload: loadSubFolders,
 
-            source: [data]
+            source: data
 
 
         });
