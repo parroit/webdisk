@@ -1,6 +1,7 @@
 (function model(exports, global) {
 
 	var EventEmitter = global.EventEmitter,
+		utils = global.utils,
 		$ = global.jQuery,
 
 		filesModel = {
@@ -39,7 +40,7 @@
 				file.uploaded = new Date().getTime();
 				return filesModel.events.emit("filesChanged");
 			}
-			msgbox(
+			utils.msgbox(
 				"An error has occurred",
 				file.name + " could not be uploaded, an error has occurred <br>" +
 				data.reason
@@ -69,53 +70,7 @@
 		}
 	}
 
-	function msgbox(title, content, type, cb) {
-		var dialog = $("#msgbox"),
-			icon = dialog.find(".modal-body .glyphicon");
-
-
-		if (!type || type === "success") {
-			icon.addClass("glyphicon-ok-circle green");
-		} else if (type === "failure") {
-			icon.addClass("glyphicon-exclamation-sign red");
-		}
-
-		dialog.find(".ok-btn").click(function(e) {
-			dialog.find(".ok-btn").off("click");
-			if (cb) {
-				cb();
-			}
-		});
-
-		dialog.attr("aria-labelledby", title);
-		dialog.find(".modal-title").html(title);
-		dialog.find(".msgbox-content").html(content);
-
-		dialog.modal("show");
-	}
-
-	function confirm(title, content, cb) {
-		var dialog = $("#confirm");
-
-		dialog.attr("aria-labelledby", title);
-		dialog.find(".modal-title").html(title);
-		dialog.find(".msgbox-content").html(content);
-
-
-		dialog.find(".yes-btn").click(function(e) {
-			dialog.find(".yes-btn").off("click");
-			dialog.find(".no-btn").off("click");
-			cb("yes");
-		});
-
-		dialog.find(".no-btn").click(function(e) {
-			dialog.find(".yes-btn").off("click");
-			dialog.find(".no-btn").off("click");
-			cb("no");
-		});
-
-		dialog.modal("show");
-	}
+	
 
 
 
@@ -142,7 +97,7 @@
 			}).join(", ");
 
 
-		confirm(
+		utils.confirm(
 			"Confirm file deletion.",
 			"Are you sure to delete files " + selectedFilesNames + " ?",
 			function(answer) {
@@ -159,7 +114,7 @@
 					error: onFailure,
 					success: function(data) {
 						if (!data.ok) {
-							msgbox(
+							utils.msgbox(
 								"An error has occurred",
 								"Action could not be accomplished, " +
 								"an error has occurred <br>" +
@@ -168,7 +123,7 @@
 							);
 							return;
 						}
-						msgbox("Successfully deleted files", data.files.join(", "), "success", function() {
+						utils.msgbox("Successfully deleted files", data.files.join(", "), "success", function() {
 							selectedFiles.forEach(function(file) {
 								var idx = filesModel.files.map(function(f) {
 									return f.path;
@@ -229,8 +184,14 @@
 		});
 	}
 
+	
+
+
 	function onFailure(xhr, textStatus, error) {
-		msgbox("An error has occurred", "Action could not be accomplished, an error has occurred <br>" + textStatus + ": " + error, "failure");
+		utils.flashError(
+			"Action could not be accomplished, an error has occurred <br>" +
+			textStatus + " " +xhr.status +": " + error, "failure"
+		);
 	}
 
 	exports.files = {
@@ -251,15 +212,15 @@
 
 	function humanFileSize(bytes, si) {
 		var thresh = si ? 1000 : 1024;
-		if (bytes < thresh) return bytes + ' B';
-		var units = si ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+		if (bytes < thresh) return bytes + " B";
+		var units = si ? ["kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"] : ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
 		var u = -1;
 		do {
 			bytes /= thresh;
 			++u;
 		} while (bytes >= thresh);
-		return bytes.toFixed(1) + ' ' + units[u];
-	};
+		return bytes.toFixed(1) + "" + units[u];
+	}
 
 	function addFile(file) {
 		var body = $("#files tbody"),

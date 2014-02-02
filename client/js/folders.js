@@ -1,12 +1,13 @@
 (function(exports, global) {
-    var $ = global.jQuery;
+    var $ = global.jQuery,
+        utils = global.utils;
 
 
     function onFailure(xhr, textStatus, error) {
         console.log(textStatus + ": " + error);
     }
 
-   
+
 
     function createFolderNode(folder) {
         return {
@@ -30,7 +31,7 @@
                 key: data.node.key
             }
         };
-      
+
     }
 
     function readFolders() {
@@ -41,17 +42,24 @@
         });
 
         $(".folders-tree").fancytree({
-            click: function(event, data){
+            click: function(event, data) {
                 if (data.targetType === "title") {
                     var node = data.node;
-                    global.files.model.readFiles(node.key);    
+                    global.files.model.readFiles(node.key);
                 }
-                
+
+            },
+            loaderror: function(e,err) {
+                utils.flashError(err.details);
+                e.preventDefault();
+                err.message = "";
+                err.details = "";
+                return false;
             },
 
-            postProcess: function(e,data){
+            postProcess: function(e, data) {
                 var folders = [];
-                data.response.forEach(function(folder){
+                data.response.forEach(function(folder) {
                     folders.push(createFolderNode(folder));
                 });
                 data.result = folders;
@@ -66,7 +74,7 @@
     }
 
 
-    
+
     readFolders();
 
 })(window, window);
