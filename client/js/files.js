@@ -48,6 +48,33 @@
 		};
 	}
 
+	function progressHandlingFunction(file) {
+		filesModel.events.emit("upload-progress", file, 0);
+		return function(e) {
+			if (e.lengthComputable) {
+
+				var percentComplete = (100 * e.loaded) / e.total;
+				//console.log(percentComplete);
+				filesModel.events.emit("upload-progress", file, percentComplete);
+
+			}
+			else {
+				console.log("Unable to compute progress information since the total size is unknown");
+			}
+		};
+	}
+
+	function makeXhr(file) {
+		return function() {
+			var myXhr = $.ajaxSettings.xhr();
+			if (myXhr.upload) {
+
+				myXhr.upload.addEventListener("progress", progressHandlingFunction(file), false); // For handling the progress of the upload
+			}
+			return myXhr;
+		};
+	}
+
 	function uploadLocalFiles() {
 		var i = 0,
 			l = filesModel.files.length;
@@ -63,14 +90,13 @@
 					processData: false,
 					contentType: false,
 					error: onFailure,
-					success: onUploadSucceded(file)
+					success: onUploadSucceded(file),
+					xhr: makeXhr(file)
 				});
 			}
 
 		}
 	}
-
-	
 
 
 
@@ -181,7 +207,7 @@
 				return utils.flashError(
 					"Action could not be accomplished, an error has occurred <br>" +
 					files.reason
-				);		
+				);
 			}
 			filesModel.currentFolder = folder;
 			filesModel.files = files;
@@ -190,14 +216,13 @@
 		});
 	}
 
-	
 
 
 	function onFailure(xhr, textStatus, error) {
-		
+
 		utils.flashError(
 			"Action could not be accomplished, an error has occurred <br>" +
-			textStatus + " " +xhr.status +": " + error, "failure"
+			textStatus + " " + xhr.status + ": " + error, "failure"
 		);
 	}
 
@@ -313,7 +338,26 @@
 
 	}
 
+	filesModel.events.on("upload-progress", function(file, progress) {
+		var tr = $("#" + btoa(file.path).replace(/=/g, "\\="));
+		//console.log(file,progress);
+		if (progress == 0) {
+			tr.find("td.uploaded").html(
+				"<div class='progress'>" +
+				"	<div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%;'>" +
+				"		<span class='sr-only'>0% Complete</span>" +
+				"	</div>"+
+				"</div>"
+			);
+		} else {
+			tr.find("td.uploaded .progress-bar")
+				.attr("aria-valuenow",progress)
+				.css("width",progress+"%");
+			tr.find("td.uploaded .progress-bar span").html(progress+"% Complete");
+		}
 
+
+	});
 
 	filesModel.events.on("filesChanged", function() {
 		$("#files tbody").html("");
