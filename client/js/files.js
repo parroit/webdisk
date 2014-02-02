@@ -172,11 +172,17 @@
 
 
 
-		$.get(url)
+		$.getJSON(url)
 
 		.fail(onFailure)
 
 		.done(function(files) {
+			if (files.error || files.reason) {
+				return utils.flashError(
+					"Action could not be accomplished, an error has occurred <br>" +
+					files.reason
+				);		
+			}
 			filesModel.currentFolder = folder;
 			filesModel.files = files;
 			filesModel.events.emit("filesChanged");
@@ -188,6 +194,7 @@
 
 
 	function onFailure(xhr, textStatus, error) {
+		
 		utils.flashError(
 			"Action could not be accomplished, an error has occurred <br>" +
 			textStatus + " " +xhr.status +": " + error, "failure"
